@@ -1,0 +1,318 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>My Orders | Kodak Business Hub</title>
+
+    <!-- Connects this page to the existing stylesheet. -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Header and navigation -->
+    <div class="top-bar">
+        <p>COMMERCIAL PRINT / TEXTILE</p>
+    </div>
+
+    <header class="site-header">
+
+        <a class="brand" href="index.html">
+            <span class="brand-mark">K</span>
+            <span class="brand-name">
+                KODAK
+                <small>BUSINESS HUB</small>
+            </span>
+        </a>
+
+        <nav class="navigation" aria-label="Main navigation">
+            <a href="index.html">Home</a>
+            <a href="products.html">Products</a>
+            <a class="active" href="orders.html">Orders</a>
+            <a href="support.html">Support</a>
+        </nav>
+
+        <a class="account-button" href="business-account.html">
+            Business Account
+        </a>
+
+    </header>
+
+    <!-- Main content -->
+    <main>
+
+        <section class="intro">
+            <p class="small-heading">ORDER MANAGEMENT</p>
+
+            <h1>My <span>Orders.</span></h1>
+
+            <p class="intro-text">
+                View your current and past orders in one place.
+                Check order status, tracking information, and expected
+                delivery dates.
+            </p>
+        </section>
+
+        <section class="business-tools" id="orders-page">
+
+            <div class="section-title">
+                <p class="small-heading">YOUR ORDER HISTORY</p>
+                <h2>Manage Your Orders</h2>
+
+                <p>
+                    Select an option below to view your orders.
+                </p>
+            </div>
+
+            <!-- Buttons for switching between order types -->
+            <div class="order-buttons">
+                <button type="button" id="current-orders-button"
+                    onclick="showOrders('current')">
+                    Current Orders
+                </button>
+
+                <button type="button" id="past-orders-button"
+                    onclick="showOrders('past')">
+                    Past Orders
+                </button>
+            </div>
+
+            <!-- Current orders section -->
+            <section id="current-orders-section">
+
+                <h2>Current Orders</h2>
+
+                <div id="no-current-orders">
+                    <p>You have no current orders.</p>
+
+                    <p>
+                        Ready to get started?
+                        <a href="products.html">Explore our products</a>
+                        to find the right printing solutions for your business.
+                    </p>
+                </div>
+
+                <div id="current-orders-container" hidden>
+
+                    <div class="order-table-wrapper">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Order ID</th>
+                                    <th>Product</th>
+                                    <th>Order Date</th>
+                                    <th>Status</th>
+                                    <th>Tracking Number</th>
+                                    <th>Expected Delivery</th>
+                                </tr>
+                            </thead>
+
+                            <tbody id="current-orders-table">
+                            </tbody>
+                        </table>
+                    </div>
+
+                </div>
+
+            </section>
+
+            <!-- Past orders section -->
+            <section id="past-orders-section" hidden>
+
+                <h2>Past Orders</h2>
+
+                <div id="no-past-orders">
+                    <p>You have no past orders.</p>
+
+                    <p>
+                        Visit our
+                        <a href="products.html">Products page</a>
+                        to explore available printing solutions.
+                    </p>
+                </div>
+
+                <div id="past-orders-container" hidden>
+
+                    <div class="order-table-wrapper">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Order ID</th>
+                                    <th>Product</th>
+                                    <th>Order Date</th>
+                                    <th>Status</th>
+                                    <th>Tracking Number</th>
+                                    <th>Expected Delivery</th>
+                                </tr>
+                            </thead>
+
+                            <tbody id="past-orders-table">
+                            </tbody>
+                        </table>
+                    </div>
+
+                </div>
+
+            </section>
+
+            <!-- Information notice -->
+            <div id="order-information">
+                <p>
+                    <strong>Order Information:</strong>
+                    This website is a student concept. Order details
+                    and tracking information are demonstration features
+                    and are not connected to a live ordering system.
+                </p>
+            </div>
+
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+
+        <div class="footer-links">
+            <a href="index.html">Home</a>
+            <a href="products.html">Products</a>
+            <a href="orders.html">Orders</a>
+            <a href="support.html">Support</a>
+            <a href="business-account.html">Business Account</a>
+        </div>
+
+        <p class="disclaimer">
+            Kodak Business Hub is a student website concept.
+            It is not an official Kodak ordering platform.
+        </p>
+
+    </footer>
+
+    <!-- JavaScript for switching between Current and Past Orders -->
+    <script>
+
+        // Demonstration order data.
+        // Both arrays are empty, so the no-orders messages appear.
+        const currentOrders = [];
+
+        const pastOrders = [];
+
+
+        // Displays the selected order section.
+        function showOrders(type) {
+
+            const currentSection =
+                document.getElementById("current-orders-section");
+
+            const pastSection =
+                document.getElementById("past-orders-section");
+
+            const currentButton =
+                document.getElementById("current-orders-button");
+
+            const pastButton =
+                document.getElementById("past-orders-button");
+
+
+            if (type === "current") {
+
+                currentSection.hidden = false;
+                pastSection.hidden = true;
+
+                currentButton.classList.add("selected");
+                pastButton.classList.remove("selected");
+
+                displayOrders(
+                    currentOrders,
+                    "current-orders-table",
+                    "no-current-orders",
+                    "current-orders-container"
+                );
+
+            } else {
+
+                currentSection.hidden = true;
+                pastSection.hidden = false;
+
+                pastButton.classList.add("selected");
+                currentButton.classList.remove("selected");
+
+                displayOrders(
+                    pastOrders,
+                    "past-orders-table",
+                    "no-past-orders",
+                    "past-orders-container"
+                );
+
+            }
+
+        }
+
+
+        // Displays orders in a table or shows the empty message.
+        function displayOrders(
+            orders,
+            tableId,
+            emptyMessageId,
+            containerId
+        ) {
+
+            const tableBody = document.getElementById(tableId);
+
+            const emptyMessage =
+                document.getElementById(emptyMessageId);
+
+            const container =
+                document.getElementById(containerId);
+
+
+            // Clear any previously displayed rows.
+            tableBody.innerHTML = "";
+
+
+            // If there are no orders, display the message.
+            if (orders.length === 0) {
+
+                emptyMessage.hidden = false;
+                container.hidden = true;
+
+                return;
+
+            }
+
+
+            // If orders exist, show the table.
+            emptyMessage.hidden = true;
+            container.hidden = false;
+
+
+            // Add each order to the table.
+            orders.forEach(function(order) {
+
+                const row = document.createElement("tr");
+
+                row.innerHTML = `
+                    <td>${order.id}</td>
+                    <td>${order.product}</td>
+                    <td>${order.orderDate}</td>
+                    <td>${order.status}</td>
+                    <td>${order.trackingNumber}</td>
+                    <td>${order.expectedDelivery}</td>
+                `;
+
+                tableBody.appendChild(row);
+
+            });
+
+        }
+
+
+        // Show Current Orders when the page first opens.
+        showOrders("current");
+
+    </script>
+
+</body>
+</html>

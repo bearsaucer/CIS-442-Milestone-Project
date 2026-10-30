@@ -1,0 +1,338 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Basic webpage settings -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Business Account | Kodak Business Hub</title>
+
+    <!-- CSS will be connected and adjusted later -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- TOP BAR -->
+    <header>
+        <p>COMMERCIAL PRINT / TEXTILE</p>
+
+        <!-- MAIN NAVIGATION -->
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="products.html">Products</a>
+            <a href="order.html">Orders</a>
+            <a href="index.html#support">Support</a>
+        </nav>
+    </header>
+
+
+    <!-- MAIN ACCOUNT CONTENT -->
+    <main>
+
+        <h1>Business Account</h1>
+
+        <p>
+            Sign in to your existing business account or create a new
+            account using your company email address.
+        </p>
+
+
+        <!-- ACCOUNT OPTIONS -->
+        <section id="account-options">
+
+            <h2>Welcome to K Business Hub</h2>
+
+            <p>Select an option below to continue.</p>
+
+            <!-- LOGIN BUTTON -->
+            <button type="button" id="show-login">
+                Login
+            </button>
+
+            <!-- SIGNUP BUTTON -->
+            <button type="button" id="show-signup">
+                Sign Up
+            </button>
+
+        </section>
+
+
+        <!-- LOGIN FORM -->
+        <section id="login-section" hidden>
+
+            <h2>Login to Your Account</h2>
+
+            <form id="login-form">
+
+                <label for="login-email">Company Email:</label>
+
+                <input
+                    type="email"
+                    id="login-email"
+                    name="login-email"
+                    placeholder="name@company.com"
+                    required
+                >
+
+                <button type="submit">Login</button>
+
+            </form>
+
+            <p id="login-message" aria-live="polite"></p>
+
+            <p>
+                Don't have an account?
+                <button type="button" id="login-to-signup">
+                    Sign Up
+                </button>
+            </p>
+
+        </section>
+
+
+        <!-- SIGNUP FORM -->
+        <section id="signup-section" hidden>
+
+            <h2>Create a Business Account</h2>
+
+            <form id="signup-form">
+
+                <label for="company-name">Company Name:</label>
+
+                <input
+                    type="text"
+                    id="company-name"
+                    name="company-name"
+                    placeholder="Enter your company name"
+                    required
+                >
+
+                <br><br>
+
+                <label for="signup-email">Company Email:</label>
+
+                <input
+                    type="email"
+                    id="signup-email"
+                    name="signup-email"
+                    placeholder="name@company.com"
+                    required
+                >
+
+                <br><br>
+
+                <button type="submit">Create Account</button>
+
+            </form>
+
+            <p id="signup-message" aria-live="polite"></p>
+
+            <p>
+                Already have an account?
+                <button type="button" id="signup-to-login">
+                    Login
+                </button>
+            </p>
+
+        </section>
+
+
+        <!-- ACCOUNT DETAILS -->
+        <section id="account-details" hidden>
+
+            <h2>Account Created Successfully!</h2>
+
+            <p id="welcome-message"></p>
+
+            <p>
+                Your Customer ID is:
+                <strong id="customer-id"></strong>
+            </p>
+
+            <p>
+                Keep your Customer ID for future reference.
+            </p>
+
+            <a href="orders.html">View Orders</a>
+
+        </section>
+
+
+        <!-- PROTOTYPE NOTICE -->
+        <section id="account-notice">
+
+            <p>
+                This is a student website prototype. Account registration
+                and login are demonstrations and are not connected to a
+                secure account database.
+            </p>
+
+        </section>
+
+    </main>
+
+
+    <!-- FOOTER -->
+    <footer>
+        <p>K Business Hub | Student Website Concept</p>
+
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="products.html">Products</a>
+            <a href="orders.html">Orders</a>
+        </nav>
+    </footer>
+
+
+    <!-- ================================================ -->
+    <!-- JAVASCRIPT SECTION                               -->
+    <!-- ================================================ -->
+    <!-- Controls the login and signup forms and creates
+         a sample Customer ID for this browser prototype. -->
+
+    <script>
+
+        // Get the account page elements.
+        const loginButton = document.getElementById("show-login");
+        const signupButton = document.getElementById("show-signup");
+
+        const loginSection = document.getElementById("login-section");
+        const signupSection = document.getElementById("signup-section");
+        const accountOptions = document.getElementById("account-options");
+        const accountDetails = document.getElementById("account-details");
+
+        // Show the login form.
+        loginButton.addEventListener("click", function () {
+            loginSection.hidden = false;
+            signupSection.hidden = true;
+            accountDetails.hidden = true;
+        });
+
+        // Show the signup form.
+        signupButton.addEventListener("click", function () {
+            signupSection.hidden = false;
+            loginSection.hidden = true;
+            accountDetails.hidden = true;
+        });
+
+        // Switch from login to signup.
+        document.getElementById("login-to-signup")
+            .addEventListener("click", function () {
+                signupSection.hidden = false;
+                loginSection.hidden = true;
+            });
+
+        // Switch from signup to login.
+        document.getElementById("signup-to-login")
+            .addEventListener("click", function () {
+                loginSection.hidden = false;
+                signupSection.hidden = true;
+            });
+
+        // Generate a sample Customer ID.
+        function generateCustomerID() {
+            const randomNumber = Math.floor(10000 + Math.random() * 90000);
+            return "CUST-" + randomNumber;
+        }
+
+        // Create a new account for the demonstration.
+        document.getElementById("signup-form")
+            .addEventListener("submit", function (event) {
+
+                // Stop the form from reloading the page.
+                event.preventDefault();
+
+                const companyName =
+                    document.getElementById("company-name").value.trim();
+
+                const companyEmail =
+                    document.getElementById("signup-email").value.trim().toLowerCase();
+
+                // Check whether this email already has an account in this browser.
+                const savedAccount = localStorage.getItem(
+                    "account-" + companyEmail
+                );
+
+                if (savedAccount) {
+                    document.getElementById("signup-message").textContent =
+                        "An account already exists for this email. Please log in.";
+
+                    return;
+                }
+
+                // Create a sample Customer ID.
+                const customerID = generateCustomerID();
+
+                // Save the account details in this browser.
+                const account = {
+                    companyName: companyName,
+                    companyEmail: companyEmail,
+                    customerID: customerID
+                };
+
+                localStorage.setItem(
+                    "account-" + companyEmail,
+                    JSON.stringify(account)
+                );
+
+                // Display the account information.
+                accountOptions.hidden = true;
+                loginSection.hidden = true;
+                signupSection.hidden = true;
+                accountDetails.hidden = false;
+
+                document.getElementById("welcome-message").textContent =
+                    "Welcome, " + companyName + "!";
+
+                document.getElementById("customer-id").textContent =
+                    customerID;
+
+                document.getElementById("signup-message").textContent = "";
+            });
+
+        // Demonstration login: check whether the email exists in this browser.
+        document.getElementById("login-form")
+            .addEventListener("submit", function (event) {
+
+                event.preventDefault();
+
+                const companyEmail =
+                    document.getElementById("login-email").value.trim().toLowerCase();
+
+                const savedAccount = localStorage.getItem(
+                    "account-" + companyEmail
+                );
+
+                // Show an error if no account is found.
+                if (!savedAccount) {
+                    document.getElementById("login-message").textContent =
+                        "No account was found for this email. Please sign up first.";
+
+                    return;
+                }
+
+                // Retrieve the saved account.
+                const account = JSON.parse(savedAccount);
+
+                // Display the customer's account information.
+                accountOptions.hidden = true;
+                loginSection.hidden = true;
+                signupSection.hidden = true;
+                accountDetails.hidden = false;
+
+                document.getElementById("welcome-message").textContent =
+                    "Welcome back, " + account.companyName + "!";
+
+                document.getElementById("customer-id").textContent =
+                    account.customerID;
+
+                document.getElementById("login-message").textContent = "";
+            });
+
+    </script>
+
+</body>
+</html>

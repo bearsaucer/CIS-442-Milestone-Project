@@ -1,0 +1,509 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Support | Kodak Business Hub</title>
+
+    <!-- Connects this page to the existing stylesheet -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Support form styling -->
+    <style>
+        /* Main support form */
+        #support-form {
+            max-width: 750px;
+            margin: 30px auto;
+            padding: 30px;
+            background-color: #ffffff;
+            border: 1px solid #dddddd;
+            border-top: 5px solid #ffcc00;
+        }
+
+        /* Form fields */
+        .support-form-group {
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 22px;
+        }
+
+        .support-form-group > label,
+        .support-form-group legend {
+            margin-bottom: 8px;
+            font-weight: bold;
+            color: #222222;
+        }
+
+        .support-form-group input[type="text"],
+        .support-form-group input[type="email"],
+        .support-form-group select,
+        .support-form-group textarea {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #cccccc;
+            border-radius: 3px;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 15px;
+            background-color: #ffffff;
+        }
+
+        /* Larger issue description box */
+        #issue-description {
+            min-height: 280px;
+            width: 100%;
+            resize: vertical;
+            line-height: 1.6;
+        }
+
+        /* Character counter */
+        #character-count {
+            display: block;
+            margin-top: 6px;
+            color: #666666;
+            text-align: right;
+            font-size: 12px;
+        }
+
+        /* Highlight fields when selected */
+        .support-form-group input:focus,
+        .support-form-group select:focus,
+        .support-form-group textarea:focus {
+            outline: 2px solid #ffcc00;
+            border-color: #111111;
+        }
+
+        /* On-site visit options */
+        fieldset.support-form-group {
+            border: 1px solid #dddddd;
+            padding: 18px;
+        }
+
+        .support-form-group legend {
+            padding: 0 8px;
+        }
+
+        .support-radio-option {
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+            margin: 10px 0;
+        }
+
+        .support-radio-option input {
+            margin-top: 5px;
+            accent-color: #c82026;
+        }
+
+        .support-radio-option label {
+            cursor: pointer;
+            color: #333333;
+        }
+
+        /* Submit and clear buttons */
+        .support-form-buttons {
+            display: flex;
+            gap: 12px;
+            flex-wrap: wrap;
+            margin-top: 25px;
+        }
+
+        .support-form-buttons button {
+            padding: 13px 20px;
+            background-color: #ffcc00;
+            color: #111111;
+            border: 2px solid #111111;
+            font-size: 14px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .support-form-buttons button:hover {
+            background-color: #e6b800;
+        }
+
+        .support-form-buttons .reset-button {
+            background-color: #ffffff;
+            color: #111111;
+        }
+
+        .support-form-buttons .reset-button:hover {
+            background-color: #eeeeee;
+        }
+
+        /* Form submission message */
+        #support-message {
+            margin-top: 20px;
+            font-weight: bold;
+            line-height: 1.6;
+        }
+
+        /* Reference number at the bottom */
+        .support-reference {
+            max-width: 750px;
+            margin: 35px auto 0;
+            padding: 25px;
+            text-align: center;
+            background-color: #111111;
+            color: #ffffff;
+            border-bottom: 5px solid #ffcc00;
+        }
+
+        .support-reference p {
+            margin: 5px 0;
+        }
+
+        .support-reference h3 {
+            margin: 10px 0;
+            color: #ffcc00;
+            font-size: 30px;
+            letter-spacing: 3px;
+        }
+
+        /* Responsive design for smaller screens */
+        @media (max-width: 560px) {
+            #support-form {
+                padding: 20px;
+            }
+
+            .support-form-buttons {
+                flex-direction: column;
+            }
+
+            .support-form-buttons button {
+                width: 100%;
+            }
+
+            .support-reference {
+                padding: 20px 12px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Top announcement bar -->
+    <div class="top-bar">
+        <p>COMMERCIAL PRINT / TEXTILE</p>
+    </div>
+
+    <!-- Website header -->
+    <header class="site-header">
+
+        <a class="brand" href="index.html">
+            <span class="brand-mark">K</span>
+
+            <span class="brand-name">
+                KODAK
+                <small>BUSINESS HUB</small>
+            </span>
+        </a>
+
+        <nav class="navigation" aria-label="Main navigation">
+            <a href="index.html">Home</a>
+            <a href="products.html">Products</a>
+            <a href="orders.html">Orders</a>
+            <a class="active" href="support.html">Support</a>
+        </nav>
+
+        <a class="account-button" href="business-account.html">
+            Business Account
+        </a>
+
+    </header>
+
+    <!-- Main support page -->
+    <main>
+
+        <!-- Introduction -->
+        <section class="intro">
+
+            <p class="small-heading">CUSTOMER SUPPORT</p>
+
+            <h1>How Can We <span>Help?</span></h1>
+
+            <p class="intro-text">
+                Having an issue with a product, order, or account?
+                Complete the form below so our support team can better
+                understand your concern and help you find a solution.
+            </p>
+
+        </section>
+
+        <!-- Support request section -->
+        <section class="business-tools">
+
+            <div class="section-title">
+
+                <p class="small-heading">WE ARE HERE TO HELP</p>
+
+                <h2>Submit a Support Request</h2>
+
+                <p>
+                    Please provide your information and describe the issue.
+                </p>
+
+            </div>
+
+            <!-- Support form -->
+            <form id="support-form">
+
+                <!-- Full name -->
+                <div class="support-form-group">
+
+                    <label for="full-name">Full Name *</label>
+
+                    <input
+                        type="text"
+                        id="full-name"
+                        name="fullName"
+                        placeholder="Enter your full name"
+                        required>
+
+                </div>
+
+                <!-- Business email -->
+                <div class="support-form-group">
+
+                    <label for="business-email">Business Email *</label>
+
+                    <input
+                        type="email"
+                        id="business-email"
+                        name="businessEmail"
+                        placeholder="name@company.com"
+                        required>
+
+                </div>
+
+                <!-- User ID -->
+                <div class="support-form-group">
+
+                    <label for="user-id">User ID *</label>
+
+                    <input
+                        type="text"
+                        id="user-id"
+                        name="userId"
+                        placeholder="Enter your business account user ID"
+                        required>
+
+                </div>
+
+                <!-- Issue category dropdown -->
+                <div class="support-form-group">
+
+                    <label for="issue-type">What Is the Issue? *</label>
+
+                    <select
+                        id="issue-type"
+                        name="issueType"
+                        required>
+
+                        <option value="">Select an issue type</option>
+                        <option value="technical">Technical Issue</option>
+                        <option value="material">Material Issue</option>
+                        <option value="order">Order Issue</option>
+                        <option value="account">Account Issue</option>
+
+                    </select>
+
+                </div>
+
+                <!-- Issue description with 2,000-character limit -->
+                <div class="support-form-group">
+
+                    <label for="issue-description">
+                        Describe Your Issue (Maximum 2,000 Characters) *
+                    </label>
+
+                    <textarea
+                        id="issue-description"
+                        name="issueDescription"
+                        rows="12"
+                        maxlength="2000"
+                        placeholder="Please explain the issue you are experiencing. Include any relevant details that could help us understand and resolve the problem..."
+                        required></textarea>
+
+                    <small id="character-count">
+                        0 / 2000 characters
+                    </small>
+
+                </div>
+
+                <!-- Physical support visit options -->
+                <fieldset class="support-form-group">
+
+                    <legend>
+                        Do You Need a Support Person to Visit Your Location? *
+                    </legend>
+
+                    <div class="support-radio-option">
+
+                        <input
+                            type="radio"
+                            id="visit-yes"
+                            name="physicalVisit"
+                            value="Yes"
+                            required>
+
+                        <label for="visit-yes">
+                            Yes, I need someone to visit my location.
+                        </label>
+
+                    </div>
+
+                    <div class="support-radio-option">
+
+                        <input
+                            type="radio"
+                            id="visit-no"
+                            name="physicalVisit"
+                            value="No">
+
+                        <label for="visit-no">
+                            No, remote support is sufficient.
+                        </label>
+
+                    </div>
+
+                </fieldset>
+
+                <!-- Form buttons -->
+                <div class="support-form-buttons">
+
+                    <button type="submit">
+                        Submit Support Request
+                    </button>
+
+                    <button type="reset" class="reset-button">
+                        Clear Form
+                    </button>
+
+                </div>
+
+                <!-- Submission confirmation -->
+                <p
+                    id="support-message"
+                    role="status"
+                    aria-live="polite">
+                </p>
+
+            </form>
+
+            <!-- Support reference number -->
+            <div class="support-reference">
+
+                <p>Support Reference Number</p>
+
+                <h3>123456789</h3>
+
+                <p>
+                    Please keep this reference number for your records.
+                </p>
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <!-- Website footer -->
+    <footer class="site-footer">
+
+        <div class="footer-links">
+            <a href="index.html">Home</a>
+            <a href="products.html">Products</a>
+            <a href="orders.html">Orders</a>
+            <a href="support.html">Support</a>
+            <a href="business-account.html">Business Account</a>
+        </div>
+
+        <p class="disclaimer">
+            Kodak Business Hub is a student website concept.
+            It is not an official Kodak support platform.
+        </p>
+
+    </footer>
+
+    <!-- JavaScript for the character counter and form demonstration -->
+    <script>
+
+        // Get the form elements.
+        const supportForm = document.getElementById("support-form");
+
+        const supportMessage =
+            document.getElementById("support-message");
+
+        const issueDescription =
+            document.getElementById("issue-description");
+
+        const characterCount =
+            document.getElementById("character-count");
+
+
+        // Update the character count while the user types.
+        issueDescription.addEventListener("input", function() {
+
+            const currentLength = issueDescription.value.length;
+
+            characterCount.textContent =
+                currentLength + " / 2000 characters";
+
+            // Warn the user when approaching the character limit.
+            if (currentLength >= 1800) {
+
+                characterCount.style.color = "#c82026";
+
+            } else {
+
+                characterCount.style.color = "#666666";
+
+            }
+
+        });
+
+
+        // Handle form submission for this demonstration.
+        supportForm.addEventListener("submit", function(event) {
+
+            // Prevent the page from refreshing.
+            event.preventDefault();
+
+            // Display a confirmation message.
+            supportMessage.textContent =
+                "Your support request has been completed for this demonstration. " +
+                "Please keep reference number 123456789 for your records.";
+
+            supportMessage.style.color = "#16803c";
+
+            // Clear the form after submission.
+            supportForm.reset();
+
+            // Reset the character counter.
+            characterCount.textContent = "0 / 2000 characters";
+
+            characterCount.style.color = "#666666";
+
+        });
+
+
+        // Clear the confirmation message when the form is reset.
+        supportForm.addEventListener("reset", function() {
+
+            supportMessage.textContent = "";
+
+            characterCount.textContent = "0 / 2000 characters";
+
+            characterCount.style.color = "#666666";
+
+        });
+
+    </script>
+
+</body>
+
+</html>
