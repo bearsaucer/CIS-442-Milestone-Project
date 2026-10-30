@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<!-- This tells the browser that this page uses modern HTML. -->
+<html lang="en">
+<head>
+    <!-- Standard character encoding and responsive page sizing. -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Business Account Login | Kodak Business Hub</title>
+    <!-- Use the same stylesheet as the rest of the website. -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- The visible page content starts here. Header, main content, and footer go inside body. -->
+    <div class="top-bar"><p>COMMERCIAL PRINT / TEXTILE</p></div>
+
+    <header class="site-header">
+        <a class="brand" href="index.html" aria-label="Kodak Business Hub home">
+            <span class="brand-mark">K</span>
+            <span class="brand-name">KODAK<small>BUSINESS HUB</small></span>
+        </a>
+        <nav class="navigation" aria-label="Main navigation">
+            <a href="index.html">Home</a>
+            <a href="products.html">Products</a>
+            <a href="order.html">Orders</a>
+            <a href="support.html">Support</a>
+        </nav>
+        <a class="account-button" href="login.html" aria-current="page">Business Account</a>
+    </header>
+
+    <!-- Main is where the unique content for this page belongs. -->
+
+    <main class="login-content">
+        <section class="intro">
+            <p class="small-heading">BUSINESS ACCOUNT</p>
+            <h1>Welcome <span>Back.</span></h1>
+            <p class="intro-text">
+                Log in to your business account, or sign up if this is your first visit.
+                After a successful login or signup, you will be taken to the homepage.
+            </p>
+        </section>
+
+        <!-- Visitors choose whether they already have an account. -->
+        <section class="login-card" id="account-options">
+            <h2>Continue to Your Account</h2>
+            <p>Choose an option to get started.</p>
+            <div class="order-buttons">
+                <button type="button" class="login-button" id="show-login">
+                    Log In with Business Account
+                </button>
+                <button type="button" class="login-button" id="show-signup">
+                    Sign Up with Business Account
+                </button>
+            </div>
+        </section>
+
+        <!-- Login form is hidden until the visitor chooses Log In. -->
+        <section class="login-card" id="login-section" hidden>
+            <h2>Log In</h2>
+            <form class="login-form" id="login-form">
+                <label for="login-email">Business Email</label>
+                <input type="email" id="login-email" name="loginEmail"
+                    placeholder="name@company.com" autocomplete="username" required>
+
+                <label for="login-password">Password</label>
+                <input type="password" id="login-password" name="loginPassword"
+                    placeholder="Enter your password" autocomplete="current-password" required>
+
+                <button type="submit">Log In and Continue</button>
+            </form>
+            <p class="form-message" id="login-message" role="status" aria-live="polite"></p>
+            <p class="login-switch">
+                New here?
+                <button type="button" class="text-button" id="login-to-signup">
+                    Create a business account
+                </button>
+            </p>
+        </section>
+
+        <!-- Signup form collects the details needed for this demonstration. -->
+        <section class="login-card" id="signup-section" hidden>
+            <h2>Sign Up</h2>
+            <form class="signup-form" id="signup-form">
+                <label for="company-name">Company Name</label>
+                <input type="text" id="company-name" name="companyName"
+                    placeholder="Enter your company name" autocomplete="organization" required>
+
+                <label for="signup-email">Business Email</label>
+                <input type="email" id="signup-email" name="signupEmail"
+                    placeholder="name@company.com" autocomplete="email" required>
+
+                <label for="signup-password">Create a Password</label>
+                <input type="password" id="signup-password" name="signupPassword"
+                    placeholder="Create a password (at least 8 characters)"
+                    autocomplete="new-password" minlength="8" required>
+
+                <label for="confirm-password">Confirm Password</label>
+                <input type="password" id="confirm-password" name="confirmPassword"
+                    placeholder="Type the password again"
+                    autocomplete="new-password" minlength="8" required>
+
+                <button type="submit">Create Account and Continue</button>
+            </form>
+            <p class="form-message" id="signup-message" role="status" aria-live="polite"></p>
+            <p class="login-switch">
+                Already have an account?
+                <button type="button" class="text-button" id="signup-to-login">Log in</button>
+            </p>
+        </section>
+
+        <div class="prototype-notice">
+            <strong>Student project notice:</strong>
+            This front-end demonstration stores account information in this browser.
+            It is not protected by a secure server. Do not use a real password or
+            sensitive business information.
+        </div>
+    </main>
+
+    <footer class="site-footer">
+        <div class="footer-links">
+            <a href="index.html">Home</a>
+            <a href="products.html">Products</a>
+            <a href="order.html">Orders</a>
+            <a href="support.html">Support</a>
+            <a href="login.html">Business Account</a>
+        </div>
+        <p class="disclaimer">
+            Kodak Business Hub is a student website concept and is not an official
+            Kodak account service.
+        </p>
+    </footer>
+
+    <script>
+        /*
+         * ELEMENT REFERENCES
+         * getElementById finds an HTML element by its unique id. Keeping these
+         * references in constants makes the later code shorter and easier to read.
+         */
+        const accountOptions = document.getElementById("account-options");
+        const loginSection = document.getElementById("login-section");
+        const signupSection = document.getElementById("signup-section");
+        const loginForm = document.getElementById("login-form");
+        const signupForm = document.getElementById("signup-form");
+        const loginMessage = document.getElementById("login-message");
+        const signupMessage = document.getElementById("signup-message");
+
+        /*
+         * SHOW LOGIN
+         * The hidden property controls whether a section appears on the page.
+         * Hide the choice screen and signup form, then show the login form.
+         */
+        document.getElementById("show-login").addEventListener("click", function () {
+            accountOptions.hidden = true;
+            loginSection.hidden = false;
+            signupSection.hidden = true;
+            loginMessage.textContent = "";
+        });
+
+        // SHOW SIGNUP: display the signup form and hide the other two sections.
+        document.getElementById("show-signup").addEventListener("click", function () {
+            accountOptions.hidden = true;
+            loginSection.hidden = true;
+            signupSection.hidden = false;
+            signupMessage.textContent = "";
+        });
+
+        // Allow visitors to move from login to signup without reloading the page.
+        document.getElementById("login-to-signup").addEventListener("click", function () {
+            loginSection.hidden = true;
+            signupSection.hidden = false;
+            signupMessage.textContent = "";
+        });
+
+        // Allow visitors to move from signup back to login.
+        document.getElementById("signup-to-login").addEventListener("click", function () {
+            signupSection.hidden = true;
+            loginSection.hidden = false;
+            loginMessage.textContent = "";
+        });
+
+        /*
+         * SIGNUP
+         * This project uses localStorage to imitate account creation in one browser.
+         * A real login system should store accounts on a secure server and hash
+         * passwords. Saving a plain password in browser storage is not secure.
+         */
+        signupForm.addEventListener("submit", function (event) {
+            // Prevent the default form action, which would reload this page.
+            event.preventDefault();
+
+            // Read form values. trim() removes accidental spaces around text fields.
+            const companyName = document.getElementById("company-name").value.trim();
+            const email = document.getElementById("signup-email").value.trim().toLowerCase();
+            const password = document.getElementById("signup-password").value;
+            const confirmPassword = document.getElementById("confirm-password").value;
+
+            // Password entries must match before we can create the demo account.
+            if (password !== confirmPassword) {
+                signupMessage.textContent = "The passwords do not match. Please try again.";
+                return; // Stops the rest of this function.
+            }
+
+            // Use the email as part of the storage key to identify the account.
+            const storageKey = "kodakBusinessAccount-" + email;
+            const existingAccount = localStorage.getItem(storageKey);
+
+            // Do not create a second account for the same email address.
+            if (existingAccount !== null) {
+                signupMessage.textContent =
+                    "An account already exists for this email. Please log in instead.";
+                return;
+            }
+
+            // Store the demo account as JSON text because localStorage stores strings.
+            const account = {
+                companyName: companyName,
+                email: email,
+                password: password
+            };
+            localStorage.setItem(storageKey, JSON.stringify(account));
+
+            // Record the current signed-in email for this browser session.
+            sessionStorage.setItem("kodakBusinessSignedInEmail", email);
+
+            // The user asked to land on the homepage after successful signup.
+            window.location.href = "index.html";
+        });
+
+        /*
+         * LOGIN
+         * Find the saved account by email and compare the password entered now
+         * with the password saved when the account was created in this browser.
+         */
+        loginForm.addEventListener("submit", function (event) {
+            event.preventDefault();
+
+            const email = document.getElementById("login-email").value.trim().toLowerCase();
+            const password = document.getElementById("login-password").value;
+            const storageKey = "kodakBusinessAccount-" + email;
+
+            // If the key is missing, no account was created for this email here.
+            const savedAccountText = localStorage.getItem(storageKey);
+            if (savedAccountText === null) {
+                loginMessage.textContent =
+                    "No account was found for that email. Please sign up first.";
+                return;
+            }
+
+            // Turn the saved JSON string back into a JavaScript object.
+            const savedAccount = JSON.parse(savedAccountText);
+
+            // Do not redirect unless the entered password matches the saved one.
+            if (savedAccount.password !== password) {
+                loginMessage.textContent = "The password is incorrect. Please try again.";
+                return;
+            }
+
+            // Save the signed-in state for this browser session.
+            sessionStorage.setItem("kodakBusinessSignedInEmail", email);
+
+            // Successful login sends the visitor to the homepage.
+            window.location.href = "index.html";
+        });
+    </script>
+</body>
+</html>

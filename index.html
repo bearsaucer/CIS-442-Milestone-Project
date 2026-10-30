@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<!-- This tells the browser that this page uses modern HTML. -->
 <html lang="en">
 <head>
     <!-- Sets the character format for the webpage. -->
@@ -15,9 +16,20 @@
 
     <!-- Connects this HTML file to the CSS file. -->
     <link rel="stylesheet" href="style.css">
+
+    <!-- LOGIN CHECK: Visitors must sign in before viewing this page.
+         The login page saves this value after a successful demo login or sign-up.
+         If the value is missing, send the visitor to login.html first. -->
+    <script>
+        if (!sessionStorage.getItem("kodakBusinessSignedInEmail")) {
+            window.location.replace("login.html");
+        }
+    </script>
+
 </head>
 
 <body>
+    <!-- The visible page content starts here. Header, main content, and footer go inside body. -->
 
     <!-- TOP BAR: The yellow bar at the top of the page. -->
     <div class="top-bar">
@@ -41,18 +53,19 @@
         <nav class="navigation" aria-label="Main navigation">
             <a class="active" href="index.html">Home</a>
             <a href="products.html">Products</a>
-            <a href="orders.html">Orders</a>
+            <a href="order.html">Orders</a>
             <a href="support.html">Support</a>
         </nav>
 
         <!-- Business Account link stays on the right side. -->
-        <a class="account-button" href="account.html">
+        <a class="account-button" href="login.html">
             Business Account
         </a>
 
     </header>
 
     <!-- MAIN: Contains the main content of the homepage. -->
+    <!-- Main is where the unique content for this page belongs. -->
     <main>
 
         <!-- INTRODUCTION: Simple text with no background picture. -->
@@ -110,7 +123,7 @@
                 </a>
 
                 <!-- Card 3 links to the orders page. -->
-                <a class="tool-card" href="orders.html">
+                <a class="tool-card" href="order.html">
                     <span class="card-number">03</span>
                     <h3>Orders</h3>
                     <p>View the sample order-information page.</p>
@@ -141,7 +154,7 @@
             <a href="quote.html">Request a Quote</a>
             <a href="order.html">Orders</a>
             <a href="support.html">Support</a>
-            <a href="account.html">Business Account</a>
+            <a href="login.html">Business Account</a>
         </div>
 
         <!-- Research links to Kodak's public website. -->

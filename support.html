@@ -1,5 +1,6 @@
 
 <!DOCTYPE html>
+<!-- This tells the browser that this page uses modern HTML. -->
 <html lang="en">
 
 <head>
@@ -181,9 +182,20 @@
             }
         }
     </style>
+
+    <!-- LOGIN CHECK: Visitors must sign in before viewing this page.
+         The login page saves this value after a successful demo login or sign-up.
+         If the value is missing, send the visitor to login.html first. -->
+    <script>
+        if (!sessionStorage.getItem("kodakBusinessSignedInEmail")) {
+            window.location.replace("login.html");
+        }
+    </script>
+
 </head>
 
 <body>
+    <!-- The visible page content starts here. Header, main content, and footer go inside body. -->
 
     <!-- Top announcement bar -->
     <div class="top-bar">
@@ -205,17 +217,18 @@
         <nav class="navigation" aria-label="Main navigation">
             <a href="index.html">Home</a>
             <a href="products.html">Products</a>
-            <a href="orders.html">Orders</a>
+            <a href="order.html">Orders</a>
             <a class="active" href="support.html">Support</a>
         </nav>
 
-        <a class="account-button" href="business-account.html">
+        <a class="account-button" href="login.html">
             Business Account
         </a>
 
     </header>
 
     <!-- Main support page -->
+    <!-- Main is where the unique content for this page belongs. -->
     <main>
 
         <!-- Introduction -->
@@ -417,9 +430,9 @@
         <div class="footer-links">
             <a href="index.html">Home</a>
             <a href="products.html">Products</a>
-            <a href="orders.html">Orders</a>
+            <a href="order.html">Orders</a>
             <a href="support.html">Support</a>
-            <a href="business-account.html">Business Account</a>
+            <a href="login.html">Business Account</a>
         </div>
 
         <p class="disclaimer">

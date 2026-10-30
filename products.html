@@ -1,5 +1,6 @@
 
 <!DOCTYPE html>
+<!-- This tells the browser that this page uses modern HTML. -->
 <html lang="en">
 
 <head>
@@ -131,6 +132,55 @@
             outline-offset: 3px;
         }
 
+        /*
+         * The Request Quote button starts hidden so each product card stays neat.
+         * When a visitor moves the mouse over a product card, the button appears.
+         * The focus rule does the same thing for someone using a keyboard.
+         */
+        .quote-button {
+            display: inline-block;
+            margin-left: 8px;
+            background-color: #222222;
+            color: #ffffff;
+            text-decoration: none;
+            font-weight: bold;
+            padding: 11px 18px;
+            border-radius: 4px;
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(5px);
+            transition: opacity 0.2s ease, transform 0.2s ease, visibility 0.2s ease;
+        }
+
+        /* Reveal the quote button only when the product card is hovered or focused. */
+        .product-card:hover .quote-button,
+        .product-card:focus-within .quote-button {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+        }
+
+        /* Give the quote button a clear hover and keyboard-focus state. */
+        .quote-button:hover {
+            background-color: #444444;
+        }
+
+        .quote-button:focus-visible {
+            outline: 3px solid #f5c400;
+            outline-offset: 3px;
+        }
+
+        /* On touch screens there is no mouse hover, so keep the button visible. */
+        @media (hover: none) {
+            .quote-button {
+                opacity: 1;
+                visibility: visible;
+                transform: none;
+                margin-top: 10px;
+                margin-left: 0;
+            }
+        }
+
         /* Styles the inventory notice */
         .inventory-notice {
             background-color: #f5f5f5;
@@ -163,9 +213,20 @@
         }
 
     </style>
+
+    <!-- LOGIN CHECK: Visitors must sign in before viewing this page.
+         The login page saves this value after a successful demo login or sign-up.
+         If the value is missing, send the visitor to login.html first. -->
+    <script>
+        if (!sessionStorage.getItem("kodakBusinessSignedInEmail")) {
+            window.location.replace("login.html");
+        }
+    </script>
+
 </head>
 
 <body>
+    <!-- Everything inside body is content that visitors can see on the page. -->
 
     <!-- ==================== TOP BAR ==================== -->
     <!-- Displays the business categories at the top of the page -->
@@ -187,11 +248,11 @@
         <nav class="main-nav" aria-label="Main navigation">
             <a href="index.html">Home</a>
             <a href="products.html" aria-current="page">Products</a>
-            <a href="index.html#orders">Orders</a>
-            <a href="index.html#support">Support</a>
+            <a href="order.html">Orders</a>
+            <a href="support.html">Support</a>
         </nav>
 
-        <a href="index.html#account" class="account-button">
+        <a href="login.html" class="account-button">
             Business Account
         </a>
 
@@ -200,6 +261,7 @@
 
     <!-- ==================== MAIN PRODUCTS CONTENT ==================== -->
 
+    <!-- Main contains the main content of this page, not the repeated navigation. -->
     <main class="products-page">
 
         <!-- Introduction to the Products page -->
@@ -255,6 +317,12 @@
                         View Details
                     </a>
 
+                    <!-- This button appears when the visitor hovers over this product card. -->
+                    <!-- It opens Support so the visitor can ask about a quote. -->
+                    <a href="support.html?request=quote&amp;product=prosper-6000" class="quote-button">
+                        Request Quote
+                    </a>
+
                 </article>
 
 
@@ -276,6 +344,12 @@
                         href="product-detail.html?product=prosper-7000"
                         class="details-button">
                         View Details
+                    </a>
+
+                    <!-- This button appears when the visitor hovers over this product card. -->
+                    <!-- It opens Support so the visitor can ask about a quote. -->
+                    <a href="support.html?request=quote&amp;product=prosper-7000" class="quote-button">
+                        Request Quote
                     </a>
 
                 </article>
@@ -301,6 +375,12 @@
                         View Details
                     </a>
 
+                    <!-- This button appears when the visitor hovers over this product card. -->
+                    <!-- It opens Support so the visitor can ask about a quote. -->
+                    <a href="support.html?request=quote&amp;product=magnus-platesetter" class="quote-button">
+                        Request Quote
+                    </a>
+
                 </article>
 
 
@@ -324,6 +404,12 @@
                         View Details
                     </a>
 
+                    <!-- This button appears when the visitor hovers over this product card. -->
+                    <!-- It opens Support so the visitor can ask about a quote. -->
+                    <a href="support.html?request=quote&amp;product=prosper-imprinting" class="quote-button">
+                        Request Quote
+                    </a>
+
                 </article>
 
 
@@ -345,6 +431,12 @@
                         href="product-detail.html?product=finishing-solutions"
                         class="details-button">
                         View Details
+                    </a>
+
+                    <!-- This button appears when the visitor hovers over this product card. -->
+                    <!-- It opens Support so the visitor can ask about a quote. -->
+                    <a href="support.html?request=quote&amp;product=finishing-solutions" class="quote-button">
+                        Request Quote
                     </a>
 
                 </article>
@@ -391,6 +483,12 @@
                         View Details
                     </a>
 
+                    <!-- This button appears when the visitor hovers over this product card. -->
+                    <!-- It opens Support so the visitor can ask about a quote. -->
+                    <a href="support.html?request=quote&amp;product=ektacolor-inks" class="quote-button">
+                        Request Quote
+                    </a>
+
                 </article>
 
 
@@ -412,6 +510,12 @@
                         href="product-detail.html?product=kodachrome-inks"
                         class="details-button">
                         View Details
+                    </a>
+
+                    <!-- This button appears when the visitor hovers over this product card. -->
+                    <!-- It opens Support so the visitor can ask about a quote. -->
+                    <a href="support.html?request=quote&amp;product=kodachrome-inks" class="quote-button">
+                        Request Quote
                     </a>
 
                 </article>
@@ -438,6 +542,12 @@
                         View Details
                     </a>
 
+                    <!-- This button appears when the visitor hovers over this product card. -->
+                    <!-- It opens Support so the visitor can ask about a quote. -->
+                    <a href="support.html?request=quote&amp;product=kodacolor-dispersions" class="quote-button">
+                        Request Quote
+                    </a>
+
                 </article>
 
 
@@ -459,6 +569,12 @@
                         href="product-detail.html?product=optimax-primers"
                         class="details-button">
                         View Details
+                    </a>
+
+                    <!-- This button appears when the visitor hovers over this product card. -->
+                    <!-- It opens Support so the visitor can ask about a quote. -->
+                    <a href="support.html?request=quote&amp;product=optimax-primers" class="quote-button">
+                        Request Quote
                     </a>
 
                 </article>
@@ -496,6 +612,7 @@
     <!-- ==================== WEBSITE FOOTER ==================== -->
     <!-- Provides links to other website sections -->
 
+    <!-- The footer repeats useful links so visitors do not have to scroll back to the top. -->
     <footer class="site-footer">
 
         <p>K Business Hub | Student Website Concept</p>
@@ -503,8 +620,8 @@
         <div class="footer-links">
             <a href="index.html">Home</a>
             <a href="products.html">Products</a>
-            <a href="index.html#orders">Orders</a>
-            <a href="index.html#support">Support</a>
+            <a href="order.html">Orders</a>
+            <a href="support.html">Support</a>
         </div>
 
     </footer>
