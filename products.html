@@ -1,0 +1,537 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Sets the character format for the webpage -->
+    <meta charset="UTF-8">
+
+    <!-- Makes the website adjust to phones, tablets, and computers -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Name displayed in the browser tab -->
+    <title>Products | Kodak Business Hub</title>
+
+    <!-- Connects this page to the website's existing CSS file -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Extra styles for the Products page -->
+    <style>
+
+        /* Styles the main products page */
+        .products-page {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 40px 25px;
+        }
+
+        /* Styles the introduction at the top */
+        .products-intro {
+            text-align: center;
+            padding: 35px 15px;
+        }
+
+        .products-intro h1 {
+            font-size: 38px;
+            margin-bottom: 15px;
+        }
+
+        .products-intro p {
+            max-width: 750px;
+            margin: 0 auto;
+            line-height: 1.7;
+        }
+
+        /* Creates space between the machine and ink sections */
+        .product-section {
+            margin-top: 45px;
+            margin-bottom: 55px;
+            scroll-margin-top: 30px;
+        }
+
+        .product-section h2 {
+            font-size: 29px;
+            margin-bottom: 10px;
+        }
+
+        .section-description {
+            line-height: 1.6;
+            margin-bottom: 25px;
+        }
+
+        /* Displays the product cards in a grid */
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+        }
+
+        /* Styles each individual product card */
+        .product-card {
+            background-color: #ffffff;
+            border: 1px solid #dddddd;
+            border-radius: 8px;
+            padding: 25px;
+            box-shadow: 0 3px 8px rgba(0, 0, 0, 0.08);
+
+            /* Makes the hover effect smooth */
+            transition: transform 0.25s ease, box-shadow 0.25s ease;
+        }
+
+        /* Adds a hover effect when the mouse moves over a card */
+        .product-card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 8px 18px rgba(0, 0, 0, 0.15);
+        }
+
+        /* Styles the small product category label */
+        .product-type {
+            display: inline-block;
+            background-color: #fff1b8;
+            color: #333333;
+            padding: 6px 10px;
+            border-radius: 4px;
+            font-size: 12px;
+            font-weight: bold;
+            margin-bottom: 15px;
+        }
+
+        /* Styles the product name */
+        .product-card h3 {
+            font-size: 21px;
+            margin-bottom: 12px;
+        }
+
+        /* Styles the product description */
+        .product-card p {
+            line-height: 1.6;
+            margin-bottom: 18px;
+        }
+
+        /* Styles the View Details buttons */
+        .details-button {
+            display: inline-block;
+            background-color: #f5c400;
+            color: #111111;
+            text-decoration: none;
+            font-weight: bold;
+            padding: 11px 18px;
+            border-radius: 4px;
+            transition: background-color 0.2s ease;
+        }
+
+        /* Changes the button color when hovered over */
+        .details-button:hover {
+            background-color: #e0b200;
+        }
+
+        /* Makes keyboard navigation easier to see */
+        .details-button:focus-visible {
+            outline: 3px solid #222222;
+            outline-offset: 3px;
+        }
+
+        /* Styles the inventory notice */
+        .inventory-notice {
+            background-color: #f5f5f5;
+            border-left: 5px solid #f5c400;
+            padding: 20px;
+            margin-top: 25px;
+            line-height: 1.6;
+        }
+
+        /* Adjusts the product grid for tablets */
+        @media (max-width: 850px) {
+            .product-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        /* Adjusts the product grid for mobile phones */
+        @media (max-width: 550px) {
+            .product-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .products-intro h1 {
+                font-size: 30px;
+            }
+
+            .product-section h2 {
+                font-size: 25px;
+            }
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <!-- ==================== TOP BAR ==================== -->
+    <!-- Displays the business categories at the top of the page -->
+
+    <div class="top-bar">
+        COMMERCIAL PRINT / TEXTILE
+    </div>
+
+
+    <!-- ==================== WEBSITE HEADER ==================== -->
+    <!-- Contains the brand name, navigation, and business account link -->
+
+    <header class="site-header">
+
+        <div class="brand">
+            <a href="index.html">K BUSINESS HUB</a>
+        </div>
+
+        <nav class="main-nav" aria-label="Main navigation">
+            <a href="index.html">Home</a>
+            <a href="products.html" aria-current="page">Products</a>
+            <a href="index.html#orders">Orders</a>
+            <a href="index.html#support">Support</a>
+        </nav>
+
+        <a href="index.html#account" class="account-button">
+            Business Account
+        </a>
+
+    </header>
+
+
+    <!-- ==================== MAIN PRODUCTS CONTENT ==================== -->
+
+    <main class="products-page">
+
+        <!-- Introduction to the Products page -->
+
+        <section class="products-intro">
+
+            <h1>Products & Supplies</h1>
+
+            <p>
+                Explore commercial printing equipment and ink supplies
+                for professional printing operations. Browse product
+                types, learn what they do, and select View Details to
+                continue to the product information and inventory page.
+            </p>
+
+        </section>
+
+
+        <!-- ================================================== -->
+        <!-- SECTION 1: PRINTING MACHINES                       -->
+        <!-- ================================================== -->
+
+        <section class="product-section" id="machines">
+
+            <h2>Printing Machines</h2>
+
+            <p class="section-description">
+                Explore equipment used to produce commercial print
+                materials, prepare printing plates, and add digital
+                printing capabilities to existing production systems.
+            </p>
+
+
+            <div class="product-grid">
+
+                <!-- Product card 1: Digital printing press -->
+
+                <article class="product-card">
+
+                    <span class="product-type">Digital Printing</span>
+
+                    <h3>PROSPER 6000 Press</h3>
+
+                    <p>
+                        A production inkjet press designed for high-volume
+                        printing. It can be used for applications such
+                        as books, direct mail, and other commercial print jobs.
+                    </p>
+
+                    <a
+                        href="product-detail.html?product=prosper-6000"
+                        class="details-button">
+                        View Details
+                    </a>
+
+                </article>
+
+
+                <!-- Product card 2: High-speed printing press -->
+
+                <article class="product-card">
+
+                    <span class="product-type">Digital Printing</span>
+
+                    <h3>PROSPER 7000 Turbo Press</h3>
+
+                    <p>
+                        A high-speed inkjet press designed for businesses
+                        that need to produce large volumes of printed
+                        material efficiently.
+                    </p>
+
+                    <a
+                        href="product-detail.html?product=prosper-7000"
+                        class="details-button">
+                        View Details
+                    </a>
+
+                </article>
+
+
+                <!-- Product card 3: Computer-to-plate equipment -->
+
+                <article class="product-card">
+
+                    <span class="product-type">Plate Making</span>
+
+                    <h3>MAGNUS Platesetters</h3>
+
+                    <p>
+                        Equipment used to transfer digital print designs
+                        onto printing plates before production on
+                        compatible offset printing presses.
+                    </p>
+
+                    <a
+                        href="product-detail.html?product=magnus-platesetter"
+                        class="details-button">
+                        View Details
+                    </a>
+
+                </article>
+
+
+                <!-- Product card 4: Hybrid printing equipment -->
+
+                <article class="product-card">
+
+                    <span class="product-type">Hybrid Printing</span>
+
+                    <h3>PROSPER Imprinting Systems</h3>
+
+                    <p>
+                        Digital printing systems that can add inkjet
+                        printing capabilities to compatible existing
+                        presses and finishing equipment.
+                    </p>
+
+                    <a
+                        href="product-detail.html?product=prosper-imprinting"
+                        class="details-button">
+                        View Details
+                    </a>
+
+                </article>
+
+
+                <!-- Product card 5: Printing finishing equipment -->
+
+                <article class="product-card">
+
+                    <span class="product-type">Finishing Equipment</span>
+
+                    <h3>KODAK Finishing Solutions</h3>
+
+                    <p>
+                        Equipment that helps handle and finish printed
+                        materials. Examples include roll handling,
+                        winding, and rewinding solutions.
+                    </p>
+
+                    <a
+                        href="product-detail.html?product=finishing-solutions"
+                        class="details-button">
+                        View Details
+                    </a>
+
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================================================== -->
+        <!-- SECTION 2: INK SUPPLIES                             -->
+        <!-- ================================================== -->
+
+        <section class="product-section" id="inks">
+
+            <h2>Ink Supplies</h2>
+
+            <p class="section-description">
+                Explore ink products and related materials used in
+                compatible digital printing systems. Product selection
+                depends on the printing equipment and application.
+            </p>
+
+
+            <div class="product-grid">
+
+                <!-- Product card 1: EKTACOLOR inks -->
+
+                <article class="product-card">
+
+                    <span class="product-type">Ink Supply</span>
+
+                    <h3>EKTACOLOR Inks</h3>
+
+                    <p>
+                        Kodak inkjet inks designed to help produce
+                        consistent color and image quality on compatible
+                        printing systems.
+                    </p>
+
+                    <a
+                        href="product-detail.html?product=ektacolor-inks"
+                        class="details-button">
+                        View Details
+                    </a>
+
+                </article>
+
+
+                <!-- Product card 2: KODACHROME inks -->
+
+                <article class="product-card">
+
+                    <span class="product-type">Ink Supply</span>
+
+                    <h3>KODACHROME Inks</h3>
+
+                    <p>
+                        Inkjet inks developed for compatible printing
+                        applications, with an emphasis on color,
+                        image stability, and fine detail.
+                    </p>
+
+                    <a
+                        href="product-detail.html?product=kodachrome-inks"
+                        class="details-button">
+                        View Details
+                    </a>
+
+                </article>
+
+
+                <!-- Product card 3: KODACOLOR dispersions -->
+
+                <article class="product-card">
+
+                    <span class="product-type">Ink Materials</span>
+
+                    <h3>KODACOLOR Dispersions</h3>
+
+                    <p>
+                        Concentrated pigment dispersions intended for
+                        ink manufacturers and original equipment
+                        manufacturers, rather than a general-purpose
+                        finished ink supply.
+                    </p>
+
+                    <a
+                        href="product-detail.html?product=kodacolor-dispersions"
+                        class="details-button">
+                        View Details
+                    </a>
+
+                </article>
+
+
+                <!-- Product card 4: OPTIMAX primers -->
+
+                <article class="product-card">
+
+                    <span class="product-type">Printing Primer</span>
+
+                    <h3>OPTIMAX Primers</h3>
+
+                    <p>
+                        Primers designed for compatible PROSPER printing
+                        technologies to prepare a surface for printing.
+                        A primer is not the same as ink.
+                    </p>
+
+                    <a
+                        href="product-detail.html?product=optimax-primers"
+                        class="details-button">
+                        View Details
+                    </a>
+
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================================================== -->
+        <!-- INVENTORY NOTICE                                   -->
+        <!-- ================================================== -->
+        <!-- Inventory will be added to the product detail page later -->
+
+        <div class="inventory-notice">
+
+            <strong>Product Inventory</strong>
+
+            <p>
+                Select View Details to open the product information page.
+                Inventory quantities, availability, and additional
+                product information can be added to that page later.
+            </p>
+
+            <p>
+                This website is a student concept. Inventory information
+                is not connected to a live Kodak inventory system.
+            </p>
+
+        </div>
+
+    </main>
+
+
+    <!-- ==================== WEBSITE FOOTER ==================== -->
+    <!-- Provides links to other website sections -->
+
+    <footer class="site-footer">
+
+        <p>K Business Hub | Student Website Concept</p>
+
+        <div class="footer-links">
+            <a href="index.html">Home</a>
+            <a href="products.html">Products</a>
+            <a href="index.html#orders">Orders</a>
+            <a href="index.html#support">Support</a>
+        </div>
+
+    </footer>
+
+
+    <!-- ================================================== -->
+    <!-- JAVASCRIPT SECTION                                 -->
+    <!-- ================================================== -->
+    <!-- This JavaScript reads which product was selected.
+         It prepares the product name for the detail page.
+         The product-detail.html page can use this information later. -->
+
+    <script>
+
+        // Get the information after the question mark in the URL.
+        const urlParameters = new URLSearchParams(window.location.search);
+
+        // Find the product selected by the customer, if one was provided.
+        const selectedProduct = urlParameters.get("product");
+
+        // Display the selected product in the browser console for testing.
+        // Open the browser developer tools to see this message.
+        if (selectedProduct) {
+            console.log("Selected product:", selectedProduct);
+        }
+
+    </script>
+
+</body>
+</html>
