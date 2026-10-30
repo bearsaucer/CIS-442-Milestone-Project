@@ -1,892 +1,172 @@
-
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
-
+<html lang="en">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Sets the character format for the webpage. -->
+    <meta charset="UTF-8">
 
-    <meta name="description"
-          content="Explore commercial printing solutions, discover products, request quotes, and connect with business support through the Kodak Business Hub concept." />
+    <!-- Makes the webpage fit computer, tablet, and phone screens. -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <meta name="theme-color" content="#111111" />
+    <!-- Short description of the website. -->
+    <meta name="description" content="Explore commercial printing and textile printing information.">
 
-    <title>Kodak Business Hub | Commercial Print, Connected</title>
+    <!-- Text displayed in the browser tab. -->
+    <title>Kodak Business Hub | Print and Textile</title>
 
-    <!-- Google Fonts: bold headlines and clean body typography -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="crossorigin" />
-    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Montserrat:wght@400;500;600;700;800;900&display=swap"
-          rel="stylesheet" />
-
-    <!-- Main website stylesheet -->
-    <link rel="stylesheet" href="style.css" />
-
-    <!-- Main website JavaScript -->
-    <script src="js/script.js" defer="defer"></script>
+    <!-- Connects this HTML file to the CSS file. -->
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-    <!-- =====================================================
-         TOP ANNOUNCEMENT BAR
-    ====================================================== -->
-
-    <div class="topline">
-        <div class="topline-inner">
-            <span class="topline-message">
-                COMMERCIAL PRINT. CONNECTED.
-            </span>
-
-            <span class="topline-right">
-                A BUSINESS PORTAL CONCEPT
-                <span class="topline-divider">|</span>
-                BUILT FOR PRINT PROFESSIONALS
-            </span>
-        </div>
+    <!-- TOP BAR: The yellow bar at the top of the page. -->
+    <div class="top-bar">
+        <p>COMMERCIAL PRINT / TEXTILE</p>
     </div>
 
+    <!-- HEADER: Contains the brand, navigation, and account link. -->
+    <header class="site-header">
 
-    <!-- =====================================================
-         MAIN HEADER AND NAVIGATION
-    ====================================================== -->
+        <!-- Brand name that links back to the homepage. -->
+        <a class="brand" href="index.html">
+            <span class="brand-mark">K</span>
 
-    <header class="header" id="site-header">
-
-        <a class="brand"
-           href="index.html"
-           aria-label="Kodak Business Hub home">
-
-            <span class="kodak-mark" aria-hidden="true">K</span>
-
-            <span class="brand-word">
+            <span class="brand-name">
                 KODAK
                 <small>BUSINESS HUB</small>
             </span>
-
         </a>
 
-
-        <button class="menu-toggle"
-                id="menu-toggle"
-                type="button"
-                aria-expanded="false"
-                aria-controls="nav"
-                aria-label="Open navigation menu">
-
-            <span></span>
-            <span></span>
-            <span></span>
-
-        </button>
-
-
-        <nav class="nav" id="nav" aria-label="Main navigation">
-
-            <a class="current" href="index.html" aria-current="page">
-                Home
-            </a>
-
-            <a href="products.html">
-                Products
-            </a>
-
-            <a href="architecture.html">
-                API Model
-            </a>
-
-            <a href="orders.html">
-                Orders
-            </a>
-
-            <a href="support.html">
-                Support
-            </a>
-
+        <!-- Navigation links to the other pages. -->
+        <nav class="navigation" aria-label="Main navigation">
+            <a class="active" href="index.html">Home</a>
+            <a href="products.html">Products</a>
+            <a href="orders.html">Orders</a>
+            <a href="support.html">Support</a>
         </nav>
 
-
-        <a class="account-link" href="account.html">
-            <span class="account-icon" aria-hidden="true">&#8599;</span>
+        <!-- Business Account link stays on the right side. -->
+        <a class="account-button" href="account.html">
             Business Account
         </a>
 
     </header>
 
-
-    <main id="main-content">
-
-
-        <!-- =================================================
-             HERO SECTION
-        ================================================== -->
-
-        <section class="hero">
-
-            <div class="hero-photo"
-                 role="img"
-                 aria-label="Commercial printing equipment and printed materials">
-            </div>
-
-            <div class="hero-overlay"></div>
-
-
-            <div class="hero-content">
-
-                <p class="eyebrow">
-                    <span class="eyebrow-line"></span>
-                    KODAK BUSINESS HUB
-                </p>
-
-
-                <h1>
-                    BIG IDEAS.<br />
-                    <span>BRILLIANT PRINT.</span><br />
-                    ONE CONNECTED HUB.
-                </h1>
-
-
-                <p class="hero-intro">
-                    Commercial printing deserves a simpler way to work.
-                    Explore solutions, discover products, request quotes,
-                    and find the resources your business needs in one
-                    connected digital experience.
-                </p>
-
-
-                <div class="button-row">
-
-                    <a class="btn btn-red" href="products.html">
-                        EXPLORE SOLUTIONS
-                        <span aria-hidden="true">&#8594;</span>
-                    </a>
-
-                    <a class="text-link light" href="quote.html">
-                        Request a Quote
-                        <span aria-hidden="true">&#8594;</span>
-                    </a>
-
-                </div>
-
-
-                <div class="hero-note">
-                    <span class="pulse"></span>
-                    A PROPOSED B2B CUSTOMER PORTAL
-                </div>
-
-            </div>
-
-
-            <!-- Decorative circular hero graphic -->
-
-            <div class="hero-stamp" aria-hidden="true">
-                <span class="stamp-top">MADE FOR</span>
-                <strong>PRINT</strong>
-                <span class="stamp-bottom">PROFESSIONALS</span>
-                <span class="stamp-star">&#10022;</span>
-            </div>
-
-
-            <div class="hero-index" aria-hidden="true">
-                01 <span>/</span> 04
-            </div>
-
-        </section>
-
-
-        <!-- =================================================
-             QUICK BENEFITS STRIP
-        ================================================== -->
-
-        <section class="quick-strip" aria-label="Business portal benefits">
-
-            <div class="quick-item">
-
-                <span class="strip-icon">01</span>
-
-                <div>
-                    <h2>Discover Solutions</h2>
-                    <p>Explore commercial print technologies.</p>
-                </div>
-
-            </div>
-
-
-            <div class="quick-item">
-
-                <span class="strip-icon">02</span>
-
-                <div>
-                    <h2>Request a Quote</h2>
-                    <p>Share your business requirements.</p>
-                </div>
-
-            </div>
-
-
-            <div class="quick-item">
-
-                <span class="strip-icon">03</span>
-
-                <div>
-                    <h2>Stay Connected</h2>
-                    <p>Find order and support resources.</p>
-                </div>
-
-            </div>
-
-        </section>
-
-
-        <!-- =================================================
-             INTRODUCTION / BRAND STATEMENT
-        ================================================== -->
-
-        <section class="section introduction">
-
-            <div class="intro-label">
-                <span class="red-line"></span>
-                BUILT AROUND YOUR BUSINESS
-            </div>
-
-
-            <div class="intro-grid">
-
-                <div class="intro-heading">
-
-                    <h2>
-                        LESS COMPLEXITY.<br />
-                        <span>MORE POSSIBILITY.</span>
-                    </h2>
-
-                </div>
-
-
-                <div class="intro-copy">
-
-                    <p>
-                        Finding the right commercial printing solution
-                        should not mean navigating disconnected systems
-                        and scattered information.
-                    </p>
-
-                    <p>
-                        Kodak Business Hub is a proposed digital
-                        experience designed to bring product discovery,
-                        quote inquiries, order information, and support
-                        resources together through one organized portal.
-                    </p>
-
-                    <a class="text-link dark" href="architecture.html">
-                        DISCOVER THE CONCEPT
-                        <span aria-hidden="true">&#8594;</span>
-                    </a>
-
-                </div>
-
-            </div>
-
-        </section>
-
-
-        <!-- =================================================
-             SOLUTIONS / PRODUCT CATEGORIES
-        ================================================== -->
-
-        <section class="section solutions-section" id="solutions">
-
-            <div class="section-heading">
-
-                <div>
-
-                    <p class="eyebrow dark">
-                        <span class="eyebrow-line"></span>
-                        EXPLORE THE POSSIBILITIES
-                    </p>
-
-                    <h2>
-                        FIND YOUR NEXT<br />
-                        <em>ADVANTAGE.</em>
-                    </h2>
-
-                </div>
-
-
-                <a class="text-link dark" href="products.html">
-                    VIEW ALL SOLUTIONS
-                    <span aria-hidden="true">&#8594;</span>
-                </a>
-
-            </div>
-
-
-            <p class="section-description">
-                Explore printing technologies, materials, and workflow
-                categories relevant to commercial print operations.
+    <!-- MAIN: Contains the main content of the homepage. -->
+    <main>
+
+        <!-- INTRODUCTION: Simple text with no background picture. -->
+        <section class="intro">
+
+            <p class="small-heading">PRINTING FOR BUSINESS</p>
+
+            <!-- Main heading. The span lets us color the second line red. -->
+            <h1>
+                Commercial Print.<br>
+                <span>Textile Print.</span>
+            </h1>
+
+            <!-- Two sentences introducing the website. -->
+            <p class="intro-text">
+                Welcome to Kodak Business Hub, a student website concept
+                for exploring commercial printing and textile and décor
+                printing information. Discover print technologies,
+                materials, and business resources in one simple place.
             </p>
 
-
-            <div class="solution-grid">
-
-
-                <!-- Solution 01 -->
-
-                <a class="solution-card card-press"
-                   href="product-details.html?category=press">
-
-                    <div class="card-top">
-                        <span class="card-number">01 / PRINT</span>
-                        <span class="card-arrow" aria-hidden="true">&#8599;</span>
-                    </div>
-
-                    <div class="card-copy">
-
-                        <p class="card-kicker">PRODUCTION TECHNOLOGY</p>
-
-                        <h3>
-                            COMMERCIAL<br />
-                            PRINTING
-                        </h3>
-
-                        <p>
-                            Explore digital production and high-speed
-                            inkjet printing solutions.
-                        </p>
-
-                        <span class="card-bottom-link">
-                            EXPLORE CATEGORY
-                            <span aria-hidden="true">&#8594;</span>
-                        </span>
-
-                    </div>
-
-                </a>
-
-
-                <!-- Solution 02 -->
-
-                <a class="solution-card card-plates"
-                   href="product-details.html?category=plates">
-
-                    <div class="card-top">
-                        <span class="card-number">02 / PREPRESS</span>
-                        <span class="card-arrow" aria-hidden="true">&#8599;</span>
-                    </div>
-
-                    <div class="card-copy">
-
-                        <p class="card-kicker">IMAGING TECHNOLOGY</p>
-
-                        <h3>
-                            PLATES &amp;<br />
-                            IMAGING
-                        </h3>
-
-                        <p>
-                            Discover plate technologies and imaging
-                            options for print workflows.
-                        </p>
-
-                        <span class="card-bottom-link">
-                            EXPLORE CATEGORY
-                            <span aria-hidden="true">&#8594;</span>
-                        </span>
-
-                    </div>
-
-                </a>
-
-
-                <!-- Solution 03 -->
-
-                <a class="solution-card card-consumables"
-                   href="product-details.html?category=consumables">
-
-                    <div class="card-top">
-                        <span class="card-number">03 / MATERIALS</span>
-                        <span class="card-arrow" aria-hidden="true">&#8599;</span>
-                    </div>
-
-                    <div class="card-copy">
-
-                        <p class="card-kicker">PRINT ESSENTIALS</p>
-
-                        <h3>
-                            INKS &amp;<br />
-                            CONSUMABLES
-                        </h3>
-
-                        <p>
-                            Explore materials that support everyday
-                            commercial printing requirements.
-                        </p>
-
-                        <span class="card-bottom-link">
-                            EXPLORE CATEGORY
-                            <span aria-hidden="true">&#8594;</span>
-                        </span>
-
-                    </div>
-
-                </a>
-
-
-                <!-- Solution 04 -->
-
-                <a class="solution-card card-workflow"
-                   href="product-details.html?category=workflow">
-
-                    <div class="card-top">
-                        <span class="card-number">04 / AUTOMATION</span>
-                        <span class="card-arrow" aria-hidden="true">&#8599;</span>
-                    </div>
-
-                    <div class="card-copy">
-
-                        <p class="card-kicker">CONNECTED PRODUCTION</p>
-
-                        <h3>
-                            WORKFLOW<br />
-                            SOFTWARE
-                        </h3>
-
-                        <p>
-                            Explore workflow and automation technologies
-                            for print production.
-                        </p>
-
-                        <span class="card-bottom-link">
-                            EXPLORE CATEGORY
-                            <span aria-hidden="true">&#8594;</span>
-                        </span>
-
-                    </div>
-
-                </a>
-
-            </div>
-
-
-            <div class="catalog-disclaimer">
-                <span class="disclaimer-icon" aria-hidden="true">i</span>
-
-                <p>
-                    This student concept provides links to public product
-                    information. Product availability, live inventory,
-                    and pricing are not connected to this prototype.
-                </p>
-
-            </div>
-
         </section>
 
+        <!-- BUSINESS TOOLS: The main section requested for the homepage. -->
+        <section class="business-tools">
 
-        <!-- =================================================
-             FEATURE SECTION: BUSINESS VALUE
-        ================================================== -->
+            <!-- Heading and description for the section. -->
+            <div class="section-title">
+                <p class="small-heading">YOUR BUSINESS, IN ONE PLACE</p>
 
-        <section class="feature-band">
-
-            <div class="feature-image"
-                 role="img"
-                 aria-label="Printed materials representing commercial print production">
-            </div>
-
-
-            <div class="feature-copy">
-
-                <p class="eyebrow">
-                    DESIGNED AROUND YOUR WORKFLOW
-                </p>
-
-
-                <h2>
-                    YOUR BUSINESS.<br />
-                    YOUR WORKFLOW.<br />
-                    <em>ONE EXPERIENCE.</em>
-                </h2>
-
+                <h2>Everything Starts With a Better Connection.</h2>
 
                 <p>
-                    A well-organized customer portal can help businesses
-                    find relevant product information, prepare quote
-                    inquiries, and access support resources with fewer
-                    unnecessary steps.
+                    Explore the main areas of this website concept below.
                 </p>
-
-
-                <a class="btn btn-dark" href="quote.html">
-                    START A BUSINESS INQUIRY
-                    <span aria-hidden="true">&#8594;</span>
-                </a>
-
             </div>
 
-
-            <div class="feature-number" aria-hidden="true">
-                K <span>/ 01</span>
-            </div>
-
-        </section>
-
-
-        <!-- =================================================
-             CUSTOMER BUSINESS TOOLS
-        ================================================== -->
-
-        <section class="section business-tools">
-
-            <div class="section-heading">
-
-                <div>
-
-                    <p class="eyebrow dark">
-                        <span class="eyebrow-line"></span>
-                        YOUR BUSINESS WORKSPACE
-                    </p>
-
-                    <h2>
-                        EVERYTHING STARTS<br />
-                        <em>WITH A BETTER CONNECTION.</em>
-                    </h2>
-
-                </div>
-
-            </div>
-
-
+            <!-- Grid containing four clickable cards. -->
             <div class="tool-grid">
 
+                <!-- Card 1 links to the products page. -->
+                <a class="tool-card" href="products.html">
+                    <span class="card-number">01</span>
+                    <h3>Products</h3>
+                    <p>Explore printing products and solution categories.</p>
+                    <span class="card-link">Explore products &rarr;</span>
+                </a>
 
-                <!-- Tool 01 -->
-
-                <article class="tool-card">
-
-                    <div class="tool-icon" aria-hidden="true">
-                        &#8599;
-                    </div>
-
-                    <span class="tool-kicker">01 / DISCOVERY</span>
-
-                    <h3>Explore Products</h3>
-
-                    <p>
-                        Browse commercial print categories and follow
-                        links to public product information.
-                    </p>
-
-                    <a class="tool-link" href="products.html">
-                        BROWSE PRODUCTS
-                        <span aria-hidden="true">&#8594;</span>
-                    </a>
-
-                </article>
-
-
-                <!-- Tool 02 -->
-
-                <article class="tool-card">
-
-                    <div class="tool-icon" aria-hidden="true">
-                        &#9993;
-                    </div>
-
-                    <span class="tool-kicker">02 / BUSINESS INQUIRIES</span>
-
+                <!-- Card 2 links to the quote page. -->
+                <a class="tool-card" href="quote.html">
+                    <span class="card-number">02</span>
                     <h3>Request a Quote</h3>
+                    <p>See how a business could ask about a printing project.</p>
+                    <span class="card-link">Request information &rarr;</span>
+                </a>
 
-                    <p>
-                        Prepare a business inquiry by sharing your
-                        product interest and project requirements.
-                    </p>
+                <!-- Card 3 links to the orders page. -->
+                <a class="tool-card" href="orders.html">
+                    <span class="card-number">03</span>
+                    <h3>Orders</h3>
+                    <p>View the sample order-information page.</p>
+                    <span class="card-link">View orders &rarr;</span>
+                </a>
 
-                    <a class="tool-link" href="quote.html">
-                        REQUEST A QUOTE
-                        <span aria-hidden="true">&#8594;</span>
-                    </a>
-
-                </article>
-
-
-                <!-- Tool 03 -->
-
-                <article class="tool-card">
-
-                    <div class="tool-icon" aria-hidden="true">
-                        &#9776;
-                    </div>
-
-                    <span class="tool-kicker">03 / ORDER EXPERIENCE</span>
-
-                    <h3>Order Information</h3>
-
-                    <p>
-                        Preview how order references and illustrative
-                        status information could appear in a portal.
-                    </p>
-
-                    <a class="tool-link" href="orders.html">
-                        VIEW SAMPLE ORDERS
-                        <span aria-hidden="true">&#8594;</span>
-                    </a>
-
-                </article>
-
-
-                <!-- Tool 04 -->
-
-                <article class="tool-card">
-
-                    <div class="tool-icon" aria-hidden="true">
-                        &#9997;
-                    </div>
-
-                    <span class="tool-kicker">04 / CUSTOMER CARE</span>
-
-                    <h3>Support Resources</h3>
-
-                    <p>
-                        Find support pathways and explore the proposed
-                        customer assistance experience.
-                    </p>
-
-                    <a class="tool-link" href="support.html">
-                        EXPLORE SUPPORT
-                        <span aria-hidden="true">&#8594;</span>
-                    </a>
-
-                </article>
-
-
-                <!-- Tool 05 -->
-
-                <article class="tool-card">
-
-                    <div class="tool-icon" aria-hidden="true">
-                        &#9673;
-                    </div>
-
-                    <span class="tool-kicker">05 / CUSTOMER ACCESS</span>
-
-                    <h3>Business Account</h3>
-
-                    <p>
-                        Preview a customer account interface designed
-                        for a future authenticated portal.
-                    </p>
-
-                    <a class="tool-link" href="account.html">
-                        VIEW ACCOUNT CONCEPT
-                        <span aria-hidden="true">&#8594;</span>
-                    </a>
-
-                </article>
-
-
-                <!-- Tool 06 -->
-
-                <article class="tool-card">
-
-                    <div class="tool-icon" aria-hidden="true">
-                        &#8644;
-                    </div>
-
-                    <span class="tool-kicker">06 / SYSTEM INTEGRATION</span>
-
-                    <h3>API Connection Model</h3>
-
-                    <p>
-                        Understand how a secure API layer could connect
-                        the customer portal with approved business systems.
-                    </p>
-
-                    <a class="tool-link" href="architecture.html">
-                        EXPLORE API MODEL
-                        <span aria-hidden="true">&#8594;</span>
-                    </a>
-
-                </article>
+                <!-- Card 4 links to the support page. -->
+                <a class="tool-card" href="support.html">
+                    <span class="card-number">04</span>
+                    <h3>Support</h3>
+                    <p>Find example help and support information.</p>
+                    <span class="card-link">Get support &rarr;</span>
+                </a>
 
             </div>
 
         </section>
-
-
-        <!-- =================================================
-             API INTEGRATION FEATURE
-        ================================================== -->
-
-        <section class="api-ribbon">
-
-            <div class="api-ribbon-mark" aria-hidden="true">
-                &#8644;
-            </div>
-
-
-            <div class="api-ribbon-copy">
-
-                <p class="eyebrow">
-                    THE TECHNOLOGY BEHIND THE EXPERIENCE
-                </p>
-
-                <h2>
-                    BRIDGING SYSTEMS.<br />
-                    CONNECTING BUSINESS.
-                </h2>
-
-                <p>
-                    Explore the proposed API-based data exchange model:
-                    a customer portal, a secure integration layer,
-                    and approved business systems working together.
-                </p>
-
-            </div>
-
-
-            <a class="btn btn-light" href="architecture.html">
-                EXPLORE THE ARCHITECTURE
-                <span aria-hidden="true">&#8594;</span>
-            </a>
-
-        </section>
-
-
-        <!-- =================================================
-             FINAL CALL TO ACTION
-        ================================================== -->
-
-        <section class="section final-cta">
-
-            <div class="final-cta-content">
-
-                <p class="eyebrow dark">
-                    <span class="eyebrow-line"></span>
-                    YOUR NEXT PROJECT STARTS HERE
-                </p>
-
-
-                <h2>
-                    LET'S MAKE<br />
-                    <span>GREAT PRINT HAPPEN.</span>
-                </h2>
-
-
-                <p>
-                    Explore the proposed portal and discover how a more
-                    connected digital experience could support commercial
-                    printing customers.
-                </p>
-
-
-                <div class="button-row">
-
-                    <a class="btn btn-red" href="quote.html">
-                        REQUEST A QUOTE
-                        <span aria-hidden="true">&#8594;</span>
-                    </a>
-
-                    <a class="text-link dark" href="products.html">
-                        EXPLORE PRODUCTS
-                        <span aria-hidden="true">&#8594;</span>
-                    </a>
-
-                </div>
-
-            </div>
-
-
-            <div class="final-cta-decoration" aria-hidden="true">
-                <span class="decoration-k">K</span>
-                <span class="decoration-circle"></span>
-                <span class="decoration-line"></span>
-            </div>
-
-        </section>
-
 
     </main>
 
+    <!-- FOOTER: Navigation links and research sources at the bottom. -->
+    <footer class="site-footer">
 
-    <!-- =====================================================
-         FOOTER
-    ====================================================== -->
-
-    <footer class="footer">
-
-        <div class="footer-top">
-
-            <a class="brand footer-brand"
-               href="index.html"
-               aria-label="Kodak Business Hub home">
-
-                <span class="kodak-mark" aria-hidden="true">K</span>
-
-                <span class="brand-word">
-                    KODAK
-                    <small>BUSINESS HUB</small>
-                </span>
-
-            </a>
-
-
-            <p class="footer-tagline">
-                COMMERCIAL PRINT. CONNECTED.
-            </p>
-
-
-            <div class="footer-links">
-
-                <a href="products.html">Products</a>
-
-                <a href="quote.html">Request a Quote</a>
-
-                <a href="orders.html">Orders</a>
-
-                <a href="support.html">Support</a>
-
-                <a href="architecture.html">API Model</a>
-
-            </div>
-
+        <!-- Bottom navigation lets visitors access the other pages. -->
+        <div class="footer-links">
+            <a href="index.html">Home</a>
+            <a href="products.html">Products</a>
+            <a href="quote.html">Request a Quote</a>
+            <a href="orders.html">Orders</a>
+            <a href="support.html">Support</a>
+            <a href="account.html">Business Account</a>
         </div>
 
-
-        <div class="footer-middle">
-
-            <p>
-                A proposed business-to-business customer portal concept
-                for commercial printing customers.
-            </p>
-
-            <a class="official-product-link"
-               href="https://www.kodak.com/en/print/products/"
+        <!-- Research links to Kodak's public website. -->
+        <p class="research-links">
+            Research:
+            <a href="https://www.kodak.com/en/print/products/"
                target="_blank"
                rel="noopener noreferrer">
-
-                Visit Kodak's Official Print Products Website
-                <span aria-hidden="true">&#8599;</span>
-
+                Kodak Print Products
             </a>
+            |
+            <a href="https://www.kodak.com/en/print/page/industrial-decor-textile/"
+               target="_blank"
+               rel="noopener noreferrer">
+                Kodak Industrial Décor and Textile
+            </a>
+        </p>
 
-        </div>
-
-
-        <div class="footer-bottom">
-
-            <p>
-                &copy; 2026 Kodak Business Hub — Student Website Prototype.
-            </p>
-
-            <p>
-                Independent academic concept. Not an official Kodak website.
-            </p>
-
-            <a href="#site-header">BACK TO TOP &#8593;</a>
-
-        </div>
+        <!-- Clarifies that this is a student project. -->
+        <p class="disclaimer">
+            Student website concept only. This is not an official Kodak
+            website and does not connect to live Kodak systems.
+        </p>
 
     </footer>
-
 
 </body>
 </html>
