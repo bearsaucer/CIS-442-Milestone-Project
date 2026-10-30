@@ -1,0 +1,85 @@
+<mxfile host="app.diagrams.net">
+  <diagram name="Page-1" id="yzqEE-GNbRl5ruqEBdva">
+    <mxGraphModel dx="1494" dy="1147" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="JMDbn2CpQ-mZwIrHJVP--10" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;fontSize=16;" value="COMMERCIAL PRINT" vertex="1">
+          <mxGeometry height="100" width="220" x="10" y="35" as="geometry" />
+        </mxCell>
+        <mxCell id="JMDbn2CpQ-mZwIrHJVP--11" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;fontSize=16;" value="/ TEXTILE" vertex="1">
+          <mxGeometry height="30" width="110" x="190" y="70" as="geometry" />
+        </mxCell>
+        <mxCell id="JMDbn2CpQ-mZwIrHJVP--14" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;fontSize=40;" value="LOGO" vertex="1">
+          <mxGeometry height="30" width="60" x="70" y="120" as="geometry" />
+        </mxCell>
+        <mxCell id="JMDbn2CpQ-mZwIrHJVP--16" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;fontSize=16;" value="Navigation Bar" vertex="1">
+          <mxGeometry height="30" width="130" x="460" y="90" as="geometry" />
+        </mxCell>
+        <mxCell id="JMDbn2CpQ-mZwIrHJVP--17" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;fontSize=16;" value="Home&amp;nbsp; &amp;nbsp; &amp;nbsp;Products&amp;nbsp; &amp;nbsp; &amp;nbsp;Orders&amp;nbsp; &amp;nbsp; &amp;nbsp;Support" vertex="1">
+          <mxGeometry height="30" width="450" x="300" y="120" as="geometry" />
+        </mxCell>
+        <mxCell id="JMDbn2CpQ-mZwIrHJVP--23" edge="1" parent="1" source="JMDbn2CpQ-mZwIrHJVP--19" style="edgeStyle=none;curved=1;rounded=0;curveGeometry=1;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=0;entryDx=0;entryDy=0;fontSize=12;defaultLabelBackgroundColor=page;startSize=8;endSize=8;" target="JMDbn2CpQ-mZwIrHJVP--21">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="JMDbn2CpQ-mZwIrHJVP--19" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;fontSize=16;" value="User&#39;s can access account information" vertex="1">
+          <mxGeometry height="30" width="60" x="1070" y="30" as="geometry" />
+        </mxCell>
+        <mxCell id="JMDbn2CpQ-mZwIrHJVP--21" parent="1" style="rounded=1;whiteSpace=wrap;html=1;roundedPerimeter=1;" value="Business Account" vertex="1">
+          <mxGeometry height="60" width="120" x="880" y="105" as="geometry" />
+        </mxCell>
+        <mxCell id="JMDbn2CpQ-mZwIrHJVP--24" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;fontSize=16;" value="Printing For Business" vertex="1">
+          <mxGeometry height="30" width="180" x="30" y="250" as="geometry" />
+        </mxCell>
+        <mxCell id="JMDbn2CpQ-mZwIrHJVP--25" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;fontSize=37;" value="COMMERCIAL PRINT." vertex="1">
+          <mxGeometry height="30" width="450" y="290" as="geometry" />
+        </mxCell>
+        <mxCell id="JMDbn2CpQ-mZwIrHJVP--26" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;fontSize=37;" value="TEXTILE PRINT." vertex="1">
+          <mxGeometry height="30" width="350" y="330" as="geometry" />
+        </mxCell>
+        <mxCell id="JMDbn2CpQ-mZwIrHJVP--28" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;fontSize=16;" value="&lt;span style=&quot;color: rgb(85, 85, 85); font-family: Arial, Helvetica, sans-serif; font-size: 17px; text-align: start; background-color: rgb(255, 255, 255);&quot;&gt;Welcome to Kodak Business Hub, a student website concept for exploring commercial printing and textile and décor printing information. Discover print technologies, materials, and business resources in one simple place.&lt;/span&gt;" vertex="1">
+          <mxGeometry height="30" width="500" x="30" y="410" as="geometry" />
+        </mxCell>
+        <mxCell id="JMDbn2CpQ-mZwIrHJVP--29" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;fontSize=16;" value="Explore the main areas of the website below" vertex="1">
+          <mxGeometry height="30" width="155" x="447.5" y="570" as="geometry" />
+        </mxCell>
+        <mxCell id="JMDbn2CpQ-mZwIrHJVP--30" parent="1" style="shape=process;whiteSpace=wrap;html=1;backgroundOutline=1;" value="Products" vertex="1">
+          <mxGeometry height="60" width="120" x="220" y="730" as="geometry" />
+        </mxCell>
+        <mxCell id="JMDbn2CpQ-mZwIrHJVP--31" parent="1" style="shape=process;whiteSpace=wrap;html=1;backgroundOutline=1;" value="Orders" vertex="1">
+          <mxGeometry height="60" width="120" x="460" y="730" as="geometry" />
+        </mxCell>
+        <mxCell id="JMDbn2CpQ-mZwIrHJVP--32" parent="1" style="shape=process;whiteSpace=wrap;html=1;backgroundOutline=1;" value="Support" vertex="1">
+          <mxGeometry height="60" width="120" x="700" y="730" as="geometry" />
+        </mxCell>
+        <mxCell id="JMDbn2CpQ-mZwIrHJVP--33" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;fontSize=16;" value="1" vertex="1">
+          <mxGeometry height="30" width="60" x="260" y="690" as="geometry" />
+        </mxCell>
+        <mxCell id="JMDbn2CpQ-mZwIrHJVP--34" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;fontSize=16;" value="2" vertex="1">
+          <mxGeometry height="30" width="60" x="495" y="690" as="geometry" />
+        </mxCell>
+        <mxCell id="JMDbn2CpQ-mZwIrHJVP--35" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;fontSize=16;" value="3" vertex="1">
+          <mxGeometry height="30" width="60" x="730" y="690" as="geometry" />
+        </mxCell>
+        <mxCell id="JMDbn2CpQ-mZwIrHJVP--36" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;fontSize=16;" value="Explore products" vertex="1">
+          <mxGeometry height="30" width="60" x="250" y="810" as="geometry" />
+        </mxCell>
+        <mxCell id="JMDbn2CpQ-mZwIrHJVP--37" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;fontSize=16;" value="View Orders" vertex="1">
+          <mxGeometry height="30" width="60" x="495" y="810" as="geometry" />
+        </mxCell>
+        <mxCell id="JMDbn2CpQ-mZwIrHJVP--38" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;fontSize=16;" value="Get Support" vertex="1">
+          <mxGeometry height="30" width="60" x="740" y="810" as="geometry" />
+        </mxCell>
+        <mxCell id="JMDbn2CpQ-mZwIrHJVP--39" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;fontSize=16;" value="Home&amp;nbsp; &amp;nbsp; &amp;nbsp;Products&amp;nbsp; &amp;nbsp; &amp;nbsp;Orders&amp;nbsp; &amp;nbsp; &amp;nbsp;Support&amp;nbsp; &amp;nbsp; &amp;nbsp;Business Account" vertex="1">
+          <mxGeometry height="30" width="1060" x="10" y="1060" as="geometry" />
+        </mxCell>
+        <mxCell id="JMDbn2CpQ-mZwIrHJVP--40" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;fontSize=16;" value="Navigation Bar that stays only at the bottom" vertex="1">
+          <mxGeometry height="30" width="240" x="40" y="1020" as="geometry" />
+        </mxCell>
+        <mxCell id="JMDbn2CpQ-mZwIrHJVP--42" edge="1" parent="1" source="JMDbn2CpQ-mZwIrHJVP--40" style="edgeStyle=none;curved=1;rounded=0;curveGeometry=1;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.283;entryY=0.17;entryDx=0;entryDy=0;entryPerimeter=0;fontSize=12;defaultLabelBackgroundColor=page;startSize=8;endSize=8;" target="JMDbn2CpQ-mZwIrHJVP--39">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
