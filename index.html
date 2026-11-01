@@ -4,11 +4,7 @@
 <head>
     <!-- Sets the character format for the webpage. -->
     <meta charset="UTF-8">
-
-    <!-- Makes the webpage fit computer, tablet, and phone screens. -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <!-- Short description of the website. -->
     <meta name="description" content="Explore commercial printing and textile printing information.">
 
     <!-- Text displayed in the browser tab. -->
@@ -18,8 +14,11 @@
     <link rel="stylesheet" href="style.css">
 
     <!-- LOGIN CHECK: Visitors must sign in before viewing this page.
-         The login page saves this value after a successful demo login or sign-up.
-         If the value is missing, send the visitor to login.html first. -->
+         The login page saves this value after a successful login or sign-up.
+         If the value is missing, it will send the visitor to login.html first.
+       
+         getItem() retrieves the user's email from sessionStorage. --> 
+
     <script>
         if (!sessionStorage.getItem("kodakBusinessSignedInEmail")) {
             window.location.replace("login.html");
@@ -29,14 +28,13 @@
 </head>
 
 <body>
-    <!-- The visible page content starts here. Header, main content, and footer go inside body. -->
 
     <!-- TOP BAR: The yellow bar at the top of the page. -->
     <div class="top-bar">
         <p>COMMERCIAL PRINT / TEXTILE</p>
     </div>
 
-    <!-- HEADER: Contains the brand, navigation, and account link. -->
+    <!-- HEADER -->
     <header class="site-header">
 
         <!-- Brand name that links back to the homepage. -->
@@ -57,18 +55,14 @@
             <a href="support.html">Support</a>
         </nav>
 
-        <!-- Business Account link stays on the right side. -->
+        <!-- Business Account link stays on the right side, to show user it is a business account -->
         <a class="account-button" href="login.html">
             Business Account
         </a>
 
     </header>
 
-    <!-- MAIN: Contains the main content of the homepage. -->
-    <!-- Main is where the unique content for this page belongs. -->
     <main>
-
-        <!-- INTRODUCTION: Simple text with no background picture. -->
         <section class="intro">
 
             <p class="small-heading">PRINTING FOR BUSINESS</p>
@@ -81,10 +75,12 @@
 
             <!-- Two sentences introducing the website. -->
             <p class="intro-text">
-                Welcome to Kodak Business Hub, a student website concept
-                for exploring commercial printing and textile and décor
-                printing information. Discover print technologies,
-                materials, and business resources in one simple place.
+                Welcome to Kodak Business Hub, this is a student website concept
+                for exploring commercial printing and textile for cis442 course. Here you will Discover print technologies,
+                materials, and business resources in one place.
+
+                Commercial Printing focuses on producing materials for books, posters, and business documents.
+                while textile printing involves the use of technology to apply desgins onto fabrics with the use of spealized inks.  
             </p>
 
         </section>
@@ -103,38 +99,34 @@
                 </p>
             </div>
 
-            <!-- Grid containing four clickable cards. -->
+            <!-- Grid containing four clickable links to the next html file. -->
             <div class="tool-grid">
 
-                <!-- Card 1 links to the products page. -->
                 <a class="tool-card" href="products.html">
                     <span class="card-number">01</span>
                     <h3>Products</h3>
-                    <p>Explore printing products and solution categories.</p>
+                    <p>Here explore printing products</p>
                     <span class="card-link">Explore products &rarr;</span>
                 </a>
 
-                <!-- Card 2 links to the quote page. -->
                 <a class="tool-card" href="quote.html">
                     <span class="card-number">02</span>
                     <h3>Request a Quote</h3>
-                    <p>See how a business could ask about a printing project.</p>
+                    <p>See how a business could ask about a printing project materials.</p>
                     <span class="card-link">Request information &rarr;</span>
                 </a>
 
-                <!-- Card 3 links to the orders page. -->
                 <a class="tool-card" href="order.html">
                     <span class="card-number">03</span>
                     <h3>Orders</h3>
-                    <p>View the sample order-information page.</p>
+                    <p>View the details of your order</p>
                     <span class="card-link">View orders &rarr;</span>
                 </a>
 
-                <!-- Card 4 links to the support page. -->
                 <a class="tool-card" href="support.html">
                     <span class="card-number">04</span>
                     <h3>Support</h3>
-                    <p>Find example help and support information.</p>
+                    <p>Find help and support information here.</p>
                     <span class="card-link">Get support &rarr;</span>
                 </a>
 
@@ -175,8 +167,7 @@
 
         <!-- Clarifies that this is a student project. -->
         <p class="disclaimer">
-            Student website concept only. This is not an official Kodak
-            website and does not connect to live Kodak systems.
+            This is a student website concept only.
         </p>
 
     </footer>
