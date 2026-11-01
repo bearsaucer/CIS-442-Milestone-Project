@@ -13,12 +13,9 @@
     <!-- LOGIN CHECK: Visitors must sign in before viewing this page.
          The login page saves this value after a successful demo login or sign-up.
          If the value is missing, send the visitor to login.html first. -->
-    <script>
-        if (!sessionStorage.getItem("kodakBusinessSignedInEmail")) {
-            window.location.replace("login.html");
-        }
-    </script>
-
+    <!-- Shared JavaScript checks that a demo user has signed in. -->
+    <!-- All website JavaScript is centralized in this one file. defer waits until HTML is parsed. -->
+    <script src="script.js" defer></script>
 </head>
 <body>
     <!-- The visible page content starts here. Header, main content, and footer go inside body. -->
@@ -134,122 +131,6 @@
             Kodak ordering platform.
         </p>
     </footer>
-
-    <script>
-        /*
-         * SAMPLE ORDER DATA
-         * Both arrays start empty, so the page says "No orders found."
-         * To test the table, add sample objects to the matching array.
-         *
-         * Current order example:
-         * { id: "ORD-1001", product: "Printing Ink", orderDate: "Oct 20, 2026",
-         *   trackingNumber: "TRK-123456" }
-         *
-         * Past order example:
-         * { id: "ORD-0990", product: "Print Supplies", orderDate: "Sep 10, 2026",
-         *   deliveryAddress: "123 Main Street, Brockport, NY" }
-         */
-        const currentOrders = [];
-        const pastOrders = [];
-
-        // Find the main page elements once so we can reuse them in our functions.
-        const currentButton = document.getElementById("current-orders-button");
-        const pastButton = document.getElementById("past-orders-button");
-        const currentPanel = document.getElementById("current-orders-panel");
-        const pastPanel = document.getElementById("past-orders-panel");
-
-        /*
-         * Displays the selected category.
-         * The "type" parameter should be the string "current" or "past".
-         */
-        function showOrders(type) {
-            const showCurrent = type === "current";
-
-            // The hidden property determines which section the visitor can see.
-            currentPanel.hidden = !showCurrent;
-            pastPanel.hidden = showCurrent;
-
-            // Update button appearance and accessibility information.
-            currentButton.classList.toggle("selected", showCurrent);
-            pastButton.classList.toggle("selected", !showCurrent);
-            currentButton.setAttribute("aria-pressed", String(showCurrent));
-            pastButton.setAttribute("aria-pressed", String(!showCurrent));
-
-            // Send the correct data array and HTML element IDs to displayOrders().
-            if (showCurrent) {
-                displayOrders(currentOrders, "current-orders-table",
-                    "no-current-orders", "current-orders-container", "current");
-            } else {
-                displayOrders(pastOrders, "past-orders-table",
-                    "no-past-orders", "past-orders-container", "past");
-            }
-        }
-
-        /*
-         * Shows an empty message if there are no orders.
-         * If orders exist, this function builds a table row for every order.
-         * Parameters let one function handle both current and past order tables.
-         */
-        function displayOrders(orders, tableId, messageId, containerId, type) {
-            const tableBody = document.getElementById(tableId);
-            const emptyMessage = document.getElementById(messageId);
-            const tableContainer = document.getElementById(containerId);
-
-            // Clear old rows before redrawing, which prevents duplicate rows.
-            tableBody.replaceChildren();
-
-            // An empty array has a length of 0, so display the empty-state message.
-            if (orders.length === 0) {
-                emptyMessage.hidden = false;
-                tableContainer.hidden = true;
-                return; // Stop here because there are no rows to create.
-            }
-
-            // If we have data, hide the message and display the table.
-            emptyMessage.hidden = true;
-            tableContainer.hidden = false;
-
-            // forEach runs once for each order object in the array.
-            orders.forEach(function (order) {
-                const row = document.createElement("tr");
-
-                // Both types of orders share these first three columns.
-                addCell(row, order.id);
-                addCell(row, order.product);
-                addCell(row, order.orderDate);
-
-                // Current orders need tracking; past orders need delivery address.
-                if (type === "current") {
-                    addCell(row, order.trackingNumber);
-                } else {
-                    addCell(row, order.deliveryAddress);
-                }
-
-                tableBody.appendChild(row);
-            });
-        }
-
-        /*
-         * Creates one table cell and puts the value inside it as plain text.
-         * textContent is safer than inserting user-provided values as HTML.
-         */
-        function addCell(row, value) {
-            const cell = document.createElement("td");
-            cell.textContent = value || "Not available";
-            row.appendChild(cell);
-        }
-
-        // Click handlers call showOrders() when a visitor changes tabs.
-        currentButton.addEventListener("click", function () {
-            showOrders("current");
-        });
-
-        pastButton.addEventListener("click", function () {
-            showOrders("past");
-        });
-
-        // Start on Current Orders when the page first opens.
-        showOrders("current");
-    </script>
+    <!-- Page-specific JavaScript: behavior is kept separate from HTML and CSS. -->
 </body>
 </html>

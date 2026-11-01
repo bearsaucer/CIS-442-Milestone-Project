@@ -17,14 +17,10 @@
          The login page saves this value after a successful login or sign-up.
          If the value is missing, it will send the visitor to login.html first.
        
-         getItem() retrieves the user's email from sessionStorage. --> 
-
-    <script>
-        if (!sessionStorage.getItem("kodakBusinessSignedInEmail")) {
-            window.location.replace("login.html");
-        }
-    </script>
-
+         getItem() retrieves the user's email from sessionStorage. -->
+    <!-- Shared JavaScript checks that a demo user has signed in. -->
+    <!-- All website JavaScript is centralized in this one file. defer waits until HTML is parsed. -->
+    <script src="script.js" defer></script>
 </head>
 
 <body>
@@ -172,5 +168,6 @@
 
     </footer>
 
+    <!-- Page-specific JavaScript: behavior is kept separate from HTML and CSS. -->
 </body>
 </html>

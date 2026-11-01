@@ -541,3 +541,390 @@ body {
     .order-buttons button { width: 100%; }
     .order-table th, .order-table td { padding: 10px; }
 }
+
+
+/* ============================================================
+   PAGE-SPECIFIC STYLES MOVED OUT OF PRODUCTS.HTML
+   These rules belong here so HTML files contain structure only.
+   ============================================================ */
+/* Styles the main products page */
+        .products-page {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 40px 25px;
+        }
+
+        /* Styles the introduction at the top */
+        .products-intro {
+            text-align: center;
+            padding: 35px 15px;
+        }
+
+        .products-intro h1 {
+            font-size: 38px;
+            margin-bottom: 15px;
+        }
+
+        .products-intro p {
+            max-width: 750px;
+            margin: 0 auto;
+            line-height: 1.7;
+        }
+
+        /* Creates space between the machine and ink sections */
+        .product-section {
+            margin-top: 45px;
+            margin-bottom: 55px;
+            scroll-margin-top: 30px;
+        }
+
+        .product-section h2 {
+            font-size: 29px;
+            margin-bottom: 10px;
+        }
+
+        .section-description {
+            line-height: 1.6;
+            margin-bottom: 25px;
+        }
+
+        /* Displays the product cards in a grid */
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+        }
+
+        /* Styles each individual product card */
+        .product-card {
+            background-color: #ffffff;
+            border: 1px solid #dddddd;
+            border-radius: 8px;
+            padding: 25px;
+            box-shadow: 0 3px 8px rgba(0, 0, 0, 0.08);
+
+            /* Makes the hover effect smooth */
+            transition: transform 0.25s ease, box-shadow 0.25s ease;
+        }
+
+        /* Adds a hover effect when the mouse moves over a card */
+        .product-card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 8px 18px rgba(0, 0, 0, 0.15);
+        }
+
+        /* Styles the small product category label */
+        .product-type {
+            display: inline-block;
+            background-color: #fff1b8;
+            color: #333333;
+            padding: 6px 10px;
+            border-radius: 4px;
+            font-size: 12px;
+            font-weight: bold;
+            margin-bottom: 15px;
+        }
+
+        /* Styles the product name */
+        .product-card h3 {
+            font-size: 21px;
+            margin-bottom: 12px;
+        }
+
+        /* Styles the product description */
+        .product-card p {
+            line-height: 1.6;
+            margin-bottom: 18px;
+        }
+
+        /* Styles the View Details buttons */
+        .details-button {
+            display: inline-block;
+            background-color: #f5c400;
+            color: #111111;
+            text-decoration: none;
+            font-weight: bold;
+            padding: 11px 18px;
+            border-radius: 4px;
+            transition: background-color 0.2s ease;
+        }
+
+        /* Changes the button color when hovered over */
+        .details-button:hover {
+            background-color: #e0b200;
+        }
+
+        /* Makes keyboard navigation easier to see */
+        .details-button:focus-visible {
+            outline: 3px solid #222222;
+            outline-offset: 3px;
+        }
+
+        /*
+         * The Request Quote button starts hidden so each product card stays neat.
+         * When a visitor moves the mouse over a product card, the button appears.
+         * The focus rule does the same thing for someone using a keyboard.
+         */
+        .quote-button {
+            display: inline-block;
+            margin-left: 8px;
+            background-color: #222222;
+            color: #ffffff;
+            text-decoration: none;
+            font-weight: bold;
+            padding: 11px 18px;
+            border-radius: 4px;
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(5px);
+            transition: opacity 0.2s ease, transform 0.2s ease, visibility 0.2s ease;
+        }
+
+        /* Reveal the quote button only when the product card is hovered or focused. */
+        .product-card:hover .quote-button,
+        .product-card:focus-within .quote-button {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+        }
+
+        /* Give the quote button a clear hover and keyboard-focus state. */
+        .quote-button:hover {
+            background-color: #444444;
+        }
+
+        .quote-button:focus-visible {
+            outline: 3px solid #f5c400;
+            outline-offset: 3px;
+        }
+
+        /* On touch screens there is no mouse hover, so keep the button visible. */
+        @media (hover: none) {
+            .quote-button {
+                opacity: 1;
+                visibility: visible;
+                transform: none;
+                margin-top: 10px;
+                margin-left: 0;
+            }
+        }
+
+        /* Styles the inventory notice */
+        .inventory-notice {
+            background-color: #f5f5f5;
+            border-left: 5px solid #f5c400;
+            padding: 20px;
+            margin-top: 25px;
+            line-height: 1.6;
+        }
+
+        /* Adjusts the product grid for tablets */
+        @media (max-width: 850px) {
+            .product-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        /* Adjusts the product grid for mobile phones */
+        @media (max-width: 550px) {
+            .product-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .products-intro h1 {
+                font-size: 30px;
+            }
+
+            .product-section h2 {
+                font-size: 25px;
+            }
+        }
+
+
+/* ============================================================
+   PAGE-SPECIFIC STYLES MOVED OUT OF SUPPORT.HTML
+   These rules belong here so HTML files contain structure only.
+   ============================================================ */
+/* Main support form */
+        #support-form {
+            max-width: 750px;
+            margin: 30px auto;
+            padding: 30px;
+            background-color: #ffffff;
+            border: 1px solid #dddddd;
+            border-top: 5px solid #ffcc00;
+        }
+
+        /* Form fields */
+        .support-form-group {
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 22px;
+        }
+
+        .support-form-group > label,
+        .support-form-group legend {
+            margin-bottom: 8px;
+            font-weight: bold;
+            color: #222222;
+        }
+
+        .support-form-group input[type="text"],
+        .support-form-group input[type="email"],
+        .support-form-group select,
+        .support-form-group textarea {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #cccccc;
+            border-radius: 3px;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 15px;
+            background-color: #ffffff;
+        }
+
+        /* Larger issue description box */
+        #issue-description {
+            min-height: 280px;
+            width: 100%;
+            resize: vertical;
+            line-height: 1.6;
+        }
+
+        /* Character counter */
+        #character-count {
+            display: block;
+            margin-top: 6px;
+            color: #666666;
+            text-align: right;
+            font-size: 12px;
+        }
+
+        /* Highlight fields when selected */
+        .support-form-group input:focus,
+        .support-form-group select:focus,
+        .support-form-group textarea:focus {
+            outline: 2px solid #ffcc00;
+            border-color: #111111;
+        }
+
+        /* On-site visit options */
+        fieldset.support-form-group {
+            border: 1px solid #dddddd;
+            padding: 18px;
+        }
+
+        .support-form-group legend {
+            padding: 0 8px;
+        }
+
+        .support-radio-option {
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+            margin: 10px 0;
+        }
+
+        .support-radio-option input {
+            margin-top: 5px;
+            accent-color: #c82026;
+        }
+
+        .support-radio-option label {
+            cursor: pointer;
+            color: #333333;
+        }
+
+        /* Submit and clear buttons */
+        .support-form-buttons {
+            display: flex;
+            gap: 12px;
+            flex-wrap: wrap;
+            margin-top: 25px;
+        }
+
+        .support-form-buttons button {
+            padding: 13px 20px;
+            background-color: #ffcc00;
+            color: #111111;
+            border: 2px solid #111111;
+            font-size: 14px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .support-form-buttons button:hover {
+            background-color: #e6b800;
+        }
+
+        .support-form-buttons .reset-button {
+            background-color: #ffffff;
+            color: #111111;
+        }
+
+        .support-form-buttons .reset-button:hover {
+            background-color: #eeeeee;
+        }
+
+        /* Form submission message */
+        #support-message {
+            margin-top: 20px;
+            font-weight: bold;
+            line-height: 1.6;
+        }
+
+        /* Reference number at the bottom */
+        .support-reference {
+            max-width: 750px;
+            margin: 35px auto 0;
+            padding: 25px;
+            text-align: center;
+            background-color: #111111;
+            color: #ffffff;
+            border-bottom: 5px solid #ffcc00;
+        }
+
+        .support-reference p {
+            margin: 5px 0;
+        }
+
+        .support-reference h3 {
+            margin: 10px 0;
+            color: #ffcc00;
+            font-size: 30px;
+            letter-spacing: 3px;
+        }
+
+        /* Responsive design for smaller screens */
+        @media (max-width: 560px) {
+            #support-form {
+                padding: 20px;
+            }
+
+            .support-form-buttons {
+                flex-direction: column;
+            }
+
+            .support-form-buttons button {
+                width: 100%;
+            }
+
+            .support-reference {
+                padding: 20px 12px;
+            }
+        }
+
+
+/* ACCESSIBILITY: Keep elements marked hidden out of the layout. */
+[hidden] {
+    display: none !important;
+}
+
+/* SHARED FORM IMPROVEMENTS: Make keyboard focus visible on interactive controls. */
+button:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible,
+a:focus-visible {
+    outline: 3px solid #c82026;
+    outline-offset: 3px;
+}
