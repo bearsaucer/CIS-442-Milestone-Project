@@ -1,0 +1,67 @@
+<mxfile host="app.diagrams.net">
+  <diagram name="Page-1" id="QjRdW8_L2XEAw1FOxsbJ">
+    <mxGraphModel dx="1743" dy="1096" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="IhyqEe1WRBS6d5Kz6MB3-1" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;fontSize=16;" value="COMMERCIAL PRINT" vertex="1">
+          <mxGeometry height="100" width="220" x="-10" y="565" as="geometry" />
+        </mxCell>
+        <mxCell id="IhyqEe1WRBS6d5Kz6MB3-2" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;fontSize=16;" value="/ TEXTILE" vertex="1">
+          <mxGeometry height="30" width="110" x="170" y="600" as="geometry" />
+        </mxCell>
+        <mxCell id="IhyqEe1WRBS6d5Kz6MB3-3" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;fontSize=40;" value="LOGO" vertex="1">
+          <mxGeometry height="30" width="60" x="50" y="650" as="geometry" />
+        </mxCell>
+        <mxCell id="IhyqEe1WRBS6d5Kz6MB3-4" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;fontSize=16;" value="Navigation Bar" vertex="1">
+          <mxGeometry height="30" width="130" x="440" y="620" as="geometry" />
+        </mxCell>
+        <mxCell id="IhyqEe1WRBS6d5Kz6MB3-5" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;fontSize=16;" value="Home&amp;nbsp; &amp;nbsp; &amp;nbsp;Products&amp;nbsp; &amp;nbsp; &amp;nbsp;Orders&amp;nbsp; &amp;nbsp; &amp;nbsp;Support" vertex="1">
+          <mxGeometry height="30" width="450" x="280" y="650" as="geometry" />
+        </mxCell>
+        <mxCell id="IhyqEe1WRBS6d5Kz6MB3-6" edge="1" parent="1" source="IhyqEe1WRBS6d5Kz6MB3-7" style="edgeStyle=none;curved=1;rounded=0;curveGeometry=1;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=0;entryDx=0;entryDy=0;fontSize=12;defaultLabelBackgroundColor=page;startSize=8;endSize=8;" target="IhyqEe1WRBS6d5Kz6MB3-8">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="IhyqEe1WRBS6d5Kz6MB3-7" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;fontSize=16;" value="User&#39;s can access account information" vertex="1">
+          <mxGeometry height="30" width="60" x="1050" y="560" as="geometry" />
+        </mxCell>
+        <mxCell id="IhyqEe1WRBS6d5Kz6MB3-8" parent="1" style="rounded=1;whiteSpace=wrap;html=1;roundedPerimeter=1;" value="Business Account" vertex="1">
+          <mxGeometry height="60" width="120" x="860" y="635" as="geometry" />
+        </mxCell>
+        <mxCell id="IhyqEe1WRBS6d5Kz6MB3-27" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;fontSize=16;" value="Home&amp;nbsp; &amp;nbsp; &amp;nbsp;Products&amp;nbsp; &amp;nbsp; &amp;nbsp;Orders&amp;nbsp; &amp;nbsp; &amp;nbsp;Support&amp;nbsp; &amp;nbsp; &amp;nbsp;Business Account" vertex="1">
+          <mxGeometry height="30" width="1060" x="-25" y="1530" as="geometry" />
+        </mxCell>
+        <mxCell id="IhyqEe1WRBS6d5Kz6MB3-28" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;fontSize=16;" value="Navigation Bar that stays only at the bottom" vertex="1">
+          <mxGeometry height="30" width="240" x="5" y="1490" as="geometry" />
+        </mxCell>
+        <mxCell id="IhyqEe1WRBS6d5Kz6MB3-29" edge="1" parent="1" source="IhyqEe1WRBS6d5Kz6MB3-28" style="edgeStyle=none;curved=1;rounded=0;curveGeometry=1;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.283;entryY=0.17;entryDx=0;entryDy=0;entryPerimeter=0;fontSize=12;defaultLabelBackgroundColor=page;startSize=8;endSize=8;" target="IhyqEe1WRBS6d5Kz6MB3-27">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="kxAgeR-zQcTBaerir2x9-1" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;fontSize=37;" value="My Orders." vertex="1">
+          <mxGeometry height="30" width="320" x="-60" y="840" as="geometry" />
+        </mxCell>
+        <mxCell id="kxAgeR-zQcTBaerir2x9-2" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;fontSize=16;" value="Order Management" vertex="1">
+          <mxGeometry height="30" width="150" x="10" y="800" as="geometry" />
+        </mxCell>
+        <mxCell id="kxAgeR-zQcTBaerir2x9-3" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;fontSize=16;" value="Choose Current Orders to view tracking information or Past Orders to see when an order was placed and where it was delivered." vertex="1">
+          <mxGeometry height="30" width="485" x="5" y="890" as="geometry" />
+        </mxCell>
+        <mxCell id="lKWT0FbWaUcvCENfHrKC-2" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;fontSize=37;" value="Manage Your Orders" vertex="1">
+          <mxGeometry height="30" width="420" x="295" y="1100" as="geometry" />
+        </mxCell>
+        <mxCell id="lKWT0FbWaUcvCENfHrKC-3" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;fontSize=16;" value="Select one of the buttons to view that type of order." vertex="1">
+          <mxGeometry height="30" width="205" x="402.5" y="1150" as="geometry" />
+        </mxCell>
+        <mxCell id="lKWT0FbWaUcvCENfHrKC-8" parent="1" style="rounded=1;whiteSpace=wrap;html=1;roundedPerimeter=1;" value="Current Orders" vertex="1">
+          <mxGeometry height="60" width="240" x="245" y="1240" as="geometry" />
+        </mxCell>
+        <mxCell id="lKWT0FbWaUcvCENfHrKC-9" parent="1" style="rounded=1;whiteSpace=wrap;html=1;roundedPerimeter=1;" value="Past Orders" vertex="1">
+          <mxGeometry height="60" width="240" x="570" y="1240" as="geometry" />
+        </mxCell>
+        <mxCell id="lKWT0FbWaUcvCENfHrKC-10" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;fontSize=16;" value="Orders listed here. If none are available, it will say no current/past orders found" vertex="1">
+          <mxGeometry height="30" width="230" x="402.5" y="1390" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
