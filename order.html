@@ -1,32 +1,25 @@
 <!DOCTYPE html>
-<!-- This tells the browser that this page uses modern HTML. -->
 <html lang="en">
 <head>
-    <!-- Tells the browser to use standard Unicode characters. -->
     <meta charset="UTF-8">
-    <!-- Makes the layout adapt to phones, tablets, and computers. -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Orders | Kodak Business Hub</title>
-    <!-- Loads the existing site styles plus added order-page styles. -->
+    <!--links the css file here -->
     <link rel="stylesheet" href="style.css">
 
-    <!-- LOGIN CHECK: Visitors must sign in before viewing this page.
-         The login page saves this value after a successful demo login or sign-up.
-         If the value is missing, send the visitor to login.html first. -->
-    <!-- Shared JavaScript checks that a demo user has signed in. -->
-    <!-- All website JavaScript is centralized in this one file. defer waits until HTML is parsed. -->
+    <!-- LOGIN CHECK: Visitors must sign in before viewing this page. -->
+    <!-- linking the js file here-->
     <script src="script.js" defer></script>
 </head>
 <body>
-    <!-- The visible page content starts here. Header, main content, and footer go inside body. -->
-    <!-- Yellow strip matching the rest of the website. -->
+    <!-- Yellow strip bar at the top matching the rest of the website. -->
     <div class="top-bar"><p>COMMERCIAL PRINT / TEXTILE</p></div>
 
-    <!-- Shared website header and navigation. -->
+    <!-- website header and navigation. -->
     <header class="site-header">
         <a class="brand" href="index.html" aria-label="Kodak Business Hub home">
             <span class="brand-mark">K</span>
-            <span class="brand-name">KODAK<small>BUSINESS HUB</small></span>
+            <span class="brand-name">KODAK<small>BUSINESS ACCOUNT HUB</small></span>
         </a>
         <nav class="navigation" aria-label="Main navigation">
             <a href="index.html">Home</a>
@@ -37,26 +30,25 @@
         <a class="account-button" href="login.html">Business Account</a>
     </header>
 
-    <!-- Main is where the unique content for this page belongs. -->
 
     <main>
         <section class="intro">
             <p class="small-heading">ORDER MANAGEMENT</p>
             <h1>My <span>Orders.</span></h1>
             <p class="intro-text">
-                Choose Current Orders to view tracking information, or Past Orders
-                to see when an order was placed and where it was delivered.
+                Here you can choose Current Orders to view tracking information and order details, or Past Orders
+                to see when an order was placed and where it was delivered with the order information.
             </p>
         </section>
 
         <section class="business-tools" id="orders-page">
             <div class="section-title">
                 <p class="small-heading">YOUR ORDER HISTORY</p>
-                <h2>Manage Your Orders</h2>
-                <p>Select one of the buttons to view that type of order.</p>
+                <h2>Businesses Orders</h2>
+                <p>Select one of the buttons to view that type of order and their details.</p>
             </div>
 
-            <!-- Each button asks JavaScript to display one order category. -->
+            <!-- here JavaScript is used to display order category the user chooses -->
             <div class="order-buttons" aria-label="Choose which orders to view">
                 <button type="button" id="current-orders-button" class="selected"
                     aria-controls="current-orders-panel" aria-pressed="true">
@@ -74,6 +66,7 @@
                 <p class="no-orders-message" id="no-current-orders" role="status">
                     No orders found.
                 </p>
+                 <!-- this section is hidden until user had a order-->
                 <div class="order-table-wrapper" id="current-orders-container" hidden>
                     <table class="order-table">
                         <thead>
@@ -95,6 +88,7 @@
                 <p class="no-orders-message" id="no-past-orders" role="status">
                     No orders found.
                 </p>
+                <!-- hidden until the user had order details-->
                 <div class="order-table-wrapper" id="past-orders-container" hidden>
                     <table class="order-table">
                         <thead>
@@ -112,8 +106,7 @@
 
             <div class="prototype-notice">
                 <strong>Order information:</strong>
-                This is a student website concept. The page does not connect to a
-                real ordering system, shipping provider, or customer database.
+                This is a student website concept.
             </div>
         </section>
     </main>
@@ -131,6 +124,5 @@
             Kodak ordering platform.
         </p>
     </footer>
-    <!-- Page-specific JavaScript: behavior is kept separate from HTML and CSS. -->
 </body>
 </html>

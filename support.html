@@ -1,6 +1,5 @@
 
 <!DOCTYPE html>
-<!-- This tells the browser that this page uses modern HTML. -->
 <html lang="en">
 
 <head>
@@ -9,21 +8,13 @@
 
     <title>Support | Kodak Business Hub</title>
 
-    <!-- Connects this page to the existing stylesheet -->
+    <!-- Connects page to css -->
     <link rel="stylesheet" href="style.css">
-
-    <!-- Support form styling -->
-<!-- LOGIN CHECK: Visitors must sign in before viewing this page.
-         The login page saves this value after a successful demo login or sign-up.
-         If the value is missing, send the visitor to login.html first. -->
-    <!-- Shared JavaScript checks that a demo user has signed in. -->
-    <!-- All website JavaScript is centralized in this one file. defer waits until HTML is parsed. -->
+    <!-- links the js file here-->
     <script src="script.js" defer></script>
 </head>
 
 <body>
-    <!-- The visible page content starts here. Header, main content, and footer go inside body. -->
-
     <!-- Top announcement bar -->
     <div class="top-bar">
         <p>COMMERCIAL PRINT / TEXTILE</p>
@@ -33,14 +24,12 @@
     <header class="site-header">
 
         <a class="brand" href="index.html">
-            <span class="brand-mark">K</span>
-
             <span class="brand-name">
                 KODAK
-                <small>BUSINESS HUB</small>
+                <small>BUSINESS ACCOUNT </small>
             </span>
         </a>
-
+        <!-- supporting links for the other files in the webpage-->
         <nav class="navigation" aria-label="Main navigation">
             <a href="index.html">Home</a>
             <a href="products.html">Products</a>
@@ -54,20 +43,13 @@
 
     </header>
 
-    <!-- Main support page -->
-    <!-- Main is where the unique content for this page belongs. -->
     <main>
-
-        <!-- Introduction -->
         <section class="intro">
-
             <p class="small-heading">CUSTOMER SUPPORT</p>
-
-            <h1>How Can We <span>Help?</span></h1>
-
+            <h1>How Can We Help?</h1>
             <p class="intro-text">
-                Having an issue with a product, order, or account?
-                Complete the form below so our support team can better
+                If you are having an issue with a product, order, or account?
+                Please complete the form below so our support team can better
                 understand your concern and help you find a solution.
             </p>
 
@@ -75,13 +57,8 @@
 
         <!-- Support request section -->
         <section class="business-tools">
-
             <div class="section-title">
-
-                <p class="small-heading">WE ARE HERE TO HELP</p>
-
                 <h2>Submit a Support Request</h2>
-
                 <p>
                     Please provide your information and describe the issue.
                 </p>
@@ -104,7 +81,6 @@
                         required>
 
                 </div>
-
                 <!-- Business email -->
                 <div class="support-form-group">
 
@@ -116,27 +92,22 @@
                         name="businessEmail"
                         placeholder="name@company.com"
                         required>
-
                 </div>
-
-                <!-- User ID -->
+                <!-- User ID this is the customer ID-->
                 <div class="support-form-group">
-
                     <label for="user-id">User ID *</label>
-
                     <input
                         type="text"
                         id="user-id"
                         name="userId"
                         placeholder="Enter your business account user ID"
                         required>
-
                 </div>
 
                 <!-- Issue category dropdown -->
                 <div class="support-form-group">
 
-                    <label for="issue-type">What Is the Issue? *</label>
+                    <label for="issue-type">What Does your issue relate with? *</label>
 
                     <select
                         id="issue-type"
@@ -165,10 +136,11 @@
                         name="issueDescription"
                         rows="12"
                         maxlength="2000"
-                        placeholder="Please explain the issue you are experiencing. Include any relevant details that could help us understand and resolve the problem..."
+                        placeholder="Please explain the issue you are experiencing. Include any relevant details that could help us understand and resolve the problem."
                         required></textarea>
 
                     <small id="character-count">
+                        <!-- limit for amount of characters-->
                         0 / 2000 characters
                     </small>
 
@@ -176,8 +148,7 @@
 
                 <!-- Physical support visit options -->
                 <fieldset class="support-form-group">
-
-                    <legend>
+                    <legend> <!-- this provides a header to the form feild -->
                         Do You Need a Support Person to Visit Your Location? *
                     </legend>
 
@@ -239,7 +210,7 @@
 
                 <p>Support Reference Number</p>
 
-                <h3>123456789</h3>
+                <h3>123-456-789</h3>
 
                 <p>
                     Please keep this reference number for your records.
@@ -263,14 +234,10 @@
         </div>
 
         <p class="disclaimer">
-            Kodak Business Hub is a student website concept.
-            It is not an official Kodak support platform.
+            Kodak Business Account Hub is a student website concept.
         </p>
 
     </footer>
-
-    <!-- JavaScript for the character counter and form demonstration -->
-    <!-- Page-specific JavaScript: behavior is kept separate from HTML and CSS. -->
 </body>
 
 </html>
