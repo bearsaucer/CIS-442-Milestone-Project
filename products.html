@@ -1,49 +1,32 @@
-
 <!DOCTYPE html>
-<!-- This tells the browser that this page uses modern HTML. -->
 <html lang="en">
 
 <head>
-    <!-- Sets the character format for the webpage -->
     <meta charset="UTF-8">
-
-    <!-- Makes the website adjust to phones, tablets, and computers -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- Name displayed in the browser tab -->
     <title>Products | Kodak Business Hub</title>
 
-    <!-- Connects this page to the website's existing CSS file -->
+    <!-- Connects this page to the website's CSS file. -->
     <link rel="stylesheet" href="style.css">
 
-    <!-- Extra styles for the Products page -->
-<!-- LOGIN CHECK: Visitors must sign in before viewing this page.
-         The login page saves this value after a successful demo login or sign-up.
-         If the value is missing, send the visitor to login.html first. -->
-    <!-- Shared JavaScript checks that a demo user has signed in. -->
-    <!-- All website JavaScript is centralized in this one file. defer waits until HTML is parsed. -->
+    <!-- Checks whether the visitor has signed in before viewing the page. -->
+    <!-- The script runs after the HTML has been loaded. -->
     <script src="script.js" defer></script>
 </head>
 
 <body>
-    <!-- Everything inside body is content that visitors can see on the page. -->
 
-    <!-- ==================== TOP BAR ==================== -->
-    <!-- Displays the business categories at the top of the page -->
-
+    <!-- Displays the commercial printing and textile categories. -->
     <div class="top-bar">
         <div class="top-bar-content">
-        COMMERCIAL PRINT / TEXTILE
+            COMMERCIAL PRINT / TEXTILE
         </div>
     </div>
 
-
-    <!-- ==================== WEBSITE HEADER ==================== -->
-    <!-- Contains the brand name, navigation, and business account link -->
-
     <header class="site-header">
 
-        <!-- Brand name that links back to the homepage. -->
+        <!-- Clicking the Kodak logo takes the visitor back to the homepage. -->
         <a class="brand" href="index.html">
             <span class="brand-mark">K</span>
 
@@ -53,7 +36,7 @@
             </span>
         </a>
 
-        <!-- Navigation links to the other pages. -->
+        <!-- Provides links to the main pages of the website. -->
         <nav class="navigation" aria-label="Main navigation">
             <a href="index.html">Home</a>
             <a class="active" href="products.html">Products</a>
@@ -61,20 +44,16 @@
             <a href="support.html">Support</a>
         </nav>
 
+        <!-- Opens the business account login page. -->
         <a href="login.html" class="account-button">
             Business Account
         </a>
 
     </header>
 
-
-    <!-- ==================== MAIN PRODUCTS CONTENT ==================== -->
-
-    <!-- Main contains the main content of this page, not the repeated navigation. -->
     <main class="products-page">
 
-        <!-- Introduction to the Products page -->
-
+        <!-- Introduces the products available on this page. -->
         <section class="products-intro">
 
             <h1>Products & Supplies</h1>
@@ -88,11 +67,7 @@
 
         </section>
 
-
-        <!-- ================================================== -->
-        <!-- SECTION 1: PRINTING MACHINES                       -->
-        <!-- ================================================== -->
-
+        <!-- Displays the available printing machines. -->
         <section class="product-section" id="machines">
 
             <h2>Printing Machines</h2>
@@ -103,11 +78,9 @@
                 printing capabilities to existing production systems.
             </p>
 
-
             <div class="product-grid">
 
-                <!-- Product card 1: Digital printing press -->
-
+                <!-- Product card 1: Digital printing press. -->
                 <article class="product-card">
 
                     <span class="product-type">Digital Printing</span>
@@ -120,23 +93,22 @@
                         as books, direct mail, and other commercial print jobs.
                     </p>
 
+                    <!-- Opens the detail page for the PROSPER 6000 press. -->
                     <a
                         href="product-detail.html?product=prosper-6000"
                         class="details-button">
                         View Details
                     </a>
 
-                    <!-- This button appears when the visitor hovers over this product card. -->
-                    <!-- It opens Support so the visitor can ask about a quote. -->
+                    <!-- Appears when the visitor hovers over the product card. -->
+                    <!-- Opens the support page with the selected product for a quote request. -->
                     <a href="support.html?request=quote&amp;product=prosper-6000" class="quote-button">
                         Request Quote
                     </a>
 
                 </article>
 
-
-                <!-- Product card 2: High-speed printing press -->
-
+                <!-- Product card 2: High-speed printing press. -->
                 <article class="product-card">
 
                     <span class="product-type">Digital Printing</span>
@@ -149,23 +121,21 @@
                         material efficiently.
                     </p>
 
+                    <!-- Opens the detail page for the PROSPER 7000 press. -->
                     <a
                         href="product-detail.html?product=prosper-7000"
                         class="details-button">
                         View Details
                     </a>
 
-                    <!-- This button appears when the visitor hovers over this product card. -->
-                    <!-- It opens Support so the visitor can ask about a quote. -->
+                    <!-- Opens the support page with the selected product for a quote request. -->
                     <a href="support.html?request=quote&amp;product=prosper-7000" class="quote-button">
                         Request Quote
                     </a>
 
                 </article>
 
-
-                <!-- Product card 3: Computer-to-plate equipment -->
-
+                <!-- Product card 3: Computer-to-plate equipment. -->
                 <article class="product-card">
 
                     <span class="product-type">Plate Making</span>
@@ -178,23 +148,21 @@
                         compatible offset printing presses.
                     </p>
 
+                    <!-- Opens the detail page for the MAGNUS platesetter. -->
                     <a
                         href="product-detail.html?product=magnus-platesetter"
                         class="details-button">
                         View Details
                     </a>
 
-                    <!-- This button appears when the visitor hovers over this product card. -->
-                    <!-- It opens Support so the visitor can ask about a quote. -->
+                    <!-- Opens the support page with the selected product for a quote request. -->
                     <a href="support.html?request=quote&amp;product=magnus-platesetter" class="quote-button">
                         Request Quote
                     </a>
 
                 </article>
 
-
-                <!-- Product card 4: Hybrid printing equipment -->
-
+                <!-- Product card 4: Hybrid printing equipment. -->
                 <article class="product-card">
 
                     <span class="product-type">Hybrid Printing</span>
@@ -207,23 +175,21 @@
                         presses and finishing equipment.
                     </p>
 
+                    <!-- Opens the detail page for the PROSPER imprinting system. -->
                     <a
                         href="product-detail.html?product=prosper-imprinting"
                         class="details-button">
                         View Details
                     </a>
 
-                    <!-- This button appears when the visitor hovers over this product card. -->
-                    <!-- It opens Support so the visitor can ask about a quote. -->
+                    <!-- Opens the support page with the selected product for a quote request. -->
                     <a href="support.html?request=quote&amp;product=prosper-imprinting" class="quote-button">
                         Request Quote
                     </a>
 
                 </article>
 
-
-                <!-- Product card 5: Printing finishing equipment -->
-
+                <!-- Product card 5: Printing finishing equipment. -->
                 <article class="product-card">
 
                     <span class="product-type">Finishing Equipment</span>
@@ -236,14 +202,14 @@
                         winding, and rewinding solutions.
                     </p>
 
+                    <!-- Opens the detail page for the finishing equipment. -->
                     <a
                         href="product-detail.html?product=finishing-solutions"
                         class="details-button">
                         View Details
                     </a>
 
-                    <!-- This button appears when the visitor hovers over this product card. -->
-                    <!-- It opens Support so the visitor can ask about a quote. -->
+                    <!-- Opens the support page with the selected product for a quote request. -->
                     <a href="support.html?request=quote&amp;product=finishing-solutions" class="quote-button">
                         Request Quote
                     </a>
@@ -254,11 +220,7 @@
 
         </section>
 
-
-        <!-- ================================================== -->
-        <!-- SECTION 2: INK SUPPLIES                             -->
-        <!-- ================================================== -->
-
+        <!-- Displays ink products and other printing materials. -->
         <section class="product-section" id="inks">
 
             <h2>Ink Supplies</h2>
@@ -269,11 +231,9 @@
                 depends on the printing equipment and application.
             </p>
 
-
             <div class="product-grid">
 
-                <!-- Product card 1: EKTACOLOR inks -->
-
+                <!-- Product card 1: EKTACOLOR inks. -->
                 <article class="product-card">
 
                     <span class="product-type">Ink Supply</span>
@@ -286,23 +246,21 @@
                         printing systems.
                     </p>
 
+                    <!-- Opens the detail page for EKTACOLOR inks. -->
                     <a
                         href="product-detail.html?product=ektacolor-inks"
                         class="details-button">
                         View Details
                     </a>
 
-                    <!-- This button appears when the visitor hovers over this product card. -->
-                    <!-- It opens Support so the visitor can ask about a quote. -->
+                    <!-- Opens the support page with the selected product for a quote request. -->
                     <a href="support.html?request=quote&amp;product=ektacolor-inks" class="quote-button">
                         Request Quote
                     </a>
 
                 </article>
 
-
-                <!-- Product card 2: KODACHROME inks -->
-
+                <!-- Product card 2: KODACHROME inks. -->
                 <article class="product-card">
 
                     <span class="product-type">Ink Supply</span>
@@ -315,23 +273,21 @@
                         image stability, and fine detail.
                     </p>
 
+                    <!-- Opens the detail page for KODACHROME inks. -->
                     <a
                         href="product-detail.html?product=kodachrome-inks"
                         class="details-button">
                         View Details
                     </a>
 
-                    <!-- This button appears when the visitor hovers over this product card. -->
-                    <!-- It opens Support so the visitor can ask about a quote. -->
+                    <!-- Opens the support page with the selected product for a quote request. -->
                     <a href="support.html?request=quote&amp;product=kodachrome-inks" class="quote-button">
                         Request Quote
                     </a>
 
                 </article>
 
-
-                <!-- Product card 3: KODACOLOR dispersions -->
-
+                <!-- Product card 3: KODACOLOR dispersions. -->
                 <article class="product-card">
 
                     <span class="product-type">Ink Materials</span>
@@ -345,23 +301,21 @@
                         finished ink supply.
                     </p>
 
+                    <!-- Opens the detail page for KODACOLOR dispersions. -->
                     <a
                         href="product-detail.html?product=kodacolor-dispersions"
                         class="details-button">
                         View Details
                     </a>
 
-                    <!-- This button appears when the visitor hovers over this product card. -->
-                    <!-- It opens Support so the visitor can ask about a quote. -->
+                    <!-- Opens the support page with the selected product for a quote request. -->
                     <a href="support.html?request=quote&amp;product=kodacolor-dispersions" class="quote-button">
                         Request Quote
                     </a>
 
                 </article>
 
-
-                <!-- Product card 4: OPTIMAX primers -->
-
+                <!-- Product card 4: OPTIMAX primers. -->
                 <article class="product-card">
 
                     <span class="product-type">Printing Primer</span>
@@ -374,14 +328,14 @@
                         A primer is not the same as ink.
                     </p>
 
+                    <!-- Opens the detail page for OPTIMAX primers. -->
                     <a
                         href="product-detail.html?product=optimax-primers"
                         class="details-button">
                         View Details
                     </a>
 
-                    <!-- This button appears when the visitor hovers over this product card. -->
-                    <!-- It opens Support so the visitor can ask about a quote. -->
+                    <!-- Opens the support page with the selected product for a quote request. -->
                     <a href="support.html?request=quote&amp;product=optimax-primers" class="quote-button">
                         Request Quote
                     </a>
@@ -392,12 +346,7 @@
 
         </section>
 
-
-        <!-- ================================================== -->
-        <!-- INVENTORY NOTICE                                   -->
-        <!-- ================================================== -->
-        <!-- Inventory will be added to the product detail page later -->
-
+        <!-- Explains where visitors can find product inventory information. -->
         <div class="inventory-notice">
 
             <strong>Product Inventory</strong>
@@ -417,11 +366,7 @@
 
     </main>
 
-
-    <!-- ==================== WEBSITE FOOTER ==================== -->
-    <!-- Provides links to other website sections -->
-
-    <!-- The footer repeats useful links so visitors do not have to scroll back to the top. -->
+    <!-- Provides links to other pages at the bottom of the website. -->
     <footer class="site-footer">
 
         <div class="footer-links">
@@ -431,19 +376,14 @@
             <a href="support.html">Support</a>
             <a href="login.html">Business Account</a>
         </div>
+
         <p class="disclaimer">
             Kodak Business Hub is a student website concept and is not an official
             Kodak ordering platform.
         </p>
+
     </footer>
 
-
-    <!-- ================================================== -->
-    <!-- JAVASCRIPT SECTION                                 -->
-    <!-- ================================================== -->
-    <!-- This JavaScript reads which product was selected.
-         It prepares the product name for the detail page.
-         The product-detail.html page can use this information later. -->
-    <!-- Page-specific JavaScript: behavior is kept separate from HTML and CSS. -->
 </body>
+
 </html>

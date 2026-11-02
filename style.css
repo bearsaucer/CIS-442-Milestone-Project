@@ -1,23 +1,21 @@
+
+/* The comments below show which HTML page each group of styles belongs to. */
+
 /*
- * SHARED WEBSITE STYLES
- * This file controls the appearance shared by all the HTML pages.
- * HTML decides what content is on a page; CSS decides how that content looks.
- * I kept the existing rules and added explanations to make the file easier to follow.
- */
+  - Shared website layout: body, top bar, logo, navigation, and footer.
+  - index.html: homepage introduction and business tool cards.
+  - orders.html: order buttons, order panels, and order table.
+  - login.html: login and sign-up forms.
+  - products.html: product cards, View Details, and Request Quote buttons.
+  - support.html: support form, radio options, and reference number.
+  Some sections are shared by more than one page.
+*/
 
-/* --------------------------------------------------
-   KODAK BUSINESS HUB
-   This file controls the appearance of the homepage.
-   -------------------------------------------------- */
-
-
-/* Applies consistent width calculations to all elements. */
+/* Makes sizing easier to manage across the website. */
 * {
     box-sizing: border-box;
 }
 
-
-/* Sets the default font, text color, and page background. */
 body {
     margin: 0;
     font-family: Arial, Helvetica, sans-serif;
@@ -26,8 +24,7 @@ body {
     line-height: 1.6;
 }
 
-
-/* TOP BAR: Creates the yellow bar at the top. */
+/* Styles the yellow bar at the top of the website. */
 .top-bar {
     background-color: #ffcc00;
     color: #111111;
@@ -37,14 +34,11 @@ body {
     letter-spacing: 1.5px;
 }
 
-/* Removes the default space around the top-bar paragraph. */
 .top-bar p {
     margin: 0;
 }
 
-
-/* HEADER: Arranges the brand, navigation, and account link. */
-/* Header: the logo, navigation links, and business-account button sit here. */
+/* Keeps the logo, navigation, and account button in the header. */
 .site-header {
     display: flex;
     align-items: center;
@@ -54,8 +48,7 @@ body {
     border-bottom: 1px solid #e5e5e5;
 }
 
-
-/* BRAND: Places the K symbol beside the brand name. */
+/* Keeps the logo symbol and brand name next to each other. */
 .brand {
     display: flex;
     align-items: center;
@@ -65,8 +58,7 @@ body {
     flex-shrink: 0;
 }
 
-
-/* Creates the yellow square containing the letter K. */
+/* Creates the yellow box around the K. */
 .brand-mark {
     display: inline-flex;
     align-items: center;
@@ -79,15 +71,14 @@ body {
     font-weight: 900;
 }
 
-
-/* Styles the KODAK BUSINESS HUB text. */
+/* Sets the size and weight of the brand name. */
 .brand-name {
     font-size: 18px;
     font-weight: 900;
     line-height: 1.1;
 }
 
-/* Places BUSINESS HUB below KODAK. */
+/* Puts the smaller Business Hub text below the brand name. */
 .brand-name small {
     display: block;
     margin-top: 4px;
@@ -95,8 +86,7 @@ body {
     letter-spacing: 1.5px;
 }
 
-
-/* NAVIGATION: Places the page links in a horizontal row. */
+/* Keeps the navigation links in a row. */
 .navigation {
     display: flex;
     align-items: center;
@@ -104,7 +94,7 @@ body {
     gap: 24px;
 }
 
-/* Styles the navigation links. */
+/* Gives the navigation and footer links the same basic style. */
 .navigation a,
 .footer-links a {
     color: #333333;
@@ -112,14 +102,13 @@ body {
     font-size: 14px;
 }
 
-/* Makes the current page and hovered links red. */
+/* Turns the navigation link red when it is active or hovered over. */
 .navigation a:hover,
 .navigation a.active {
     color: #c82026;
 }
 
-
-/* ACCOUNT BUTTON: Keeps Business Account on the right. */
+/* Styles the Business Account button. */
 .account-button {
     display: inline-block;
     padding: 11px 16px;
@@ -131,21 +120,19 @@ body {
     white-space: nowrap;
 }
 
-/* Changes the button to red when the mouse is over it. */
+/* Changes the account button to red when the user hovers over it. */
 .account-button:hover {
     background-color: #c82026;
 }
 
-
-/* INTRODUCTION: Provides space around the main heading. */
+/* Homepage only (index.html): controls the introduction at the top of the page. */
 .intro {
     max-width: 1000px;
     margin: 0 auto;
     padding: 75px 24px 65px;
 }
 
-
-/* Styles the small red heading above the main title. */
+/* Styles the small heading above the main title. */
 .small-heading {
     margin: 0 0 12px;
     color: #c82026;
@@ -154,8 +141,7 @@ body {
     letter-spacing: 2px;
 }
 
-
-/* Styles the main homepage heading. */
+/* Makes the main homepage heading large and easy to read. */
 .intro h1 {
     margin: 0;
     font-size: clamp(38px, 6vw, 64px);
@@ -163,13 +149,12 @@ body {
     letter-spacing: -1.5px;
 }
 
-/* Colors the words Textile Print red. */
+/* Highlights part of the main heading in red. */
 .intro h1 span {
     color: #c82026;
 }
 
-
-/* Styles the paragraph below the main heading. */
+/* Keeps the introduction text from stretching too far across the page. */
 .intro-text {
     max-width: 690px;
     margin-top: 22px;
@@ -177,22 +162,19 @@ body {
     font-size: 17px;
 }
 
-
-/* BUSINESS TOOLS: Creates a light gray section background. */
+/* Homepage only (index.html): styles the section with the business tool cards. */
 .business-tools {
     padding: 60px 5% 75px;
     background-color: #f5f5f5;
 }
 
-
-/* Centers the section heading and description. */
+/* Centers the heading and description above the tool cards. */
 .section-title {
     max-width: 760px;
     margin: 0 auto 32px;
     text-align: center;
 }
 
-/* Sets the size and spacing of the section heading. */
 .section-title h2 {
     margin: 0;
     font-size: clamp(26px, 4vw, 38px);
@@ -204,8 +186,7 @@ body {
     color: #666666;
 }
 
-
-/* TOOL GRID: Arranges the four cards in four columns. */
+/* Arranges the business tool cards into four columns. */
 .tool-grid {
     display: grid;
     grid-template-columns: repeat(4, minmax(0, 1fr));
@@ -214,8 +195,7 @@ body {
     margin: 0 auto;
 }
 
-
-/* TOOL CARDS: Makes each card clickable and white. */
+/* Sets the layout and appearance of each tool card. */
 .tool-card {
     display: flex;
     flex-direction: column;
@@ -229,14 +209,13 @@ body {
     transition: transform 0.2s ease, border-color 0.2s ease;
 }
 
-/* Moves the card slightly and changes its border on hover. */
+/* Moves the card up slightly and changes its border to red on hover. */
 .tool-card:hover {
     transform: translateY(-4px);
     border-color: #c82026;
 }
 
-
-/* Styles the small number at the top of each card. */
+/* Styles the number displayed on each tool card. */
 .card-number {
     color: #c82026;
     font-size: 12px;
@@ -244,20 +223,20 @@ body {
     letter-spacing: 1px;
 }
 
-/* Styles each card's heading. */
+/* Adds spacing around the card headings. */
 .tool-card h3 {
     margin: 18px 0 6px;
     font-size: 20px;
 }
 
-/* Styles the description inside each card. */
+/* Styles the descriptions inside the tool cards. */
 .tool-card p {
     margin: 0 0 18px;
     color: #666666;
     font-size: 14px;
 }
 
-/* Styles the clickable-looking text at the bottom of each card. */
+/* Keeps the link near the bottom of each card. */
 .card-link {
     margin-top: auto;
     color: #c82026;
@@ -265,9 +244,7 @@ body {
     font-weight: bold;
 }
 
-
-/* FOOTER: Creates a black section at the bottom of the page. */
-/* Footer styles apply to the links and note at the bottom of each page. */
+/* Shared footer: used on pages that include the site footer, including index.html. */
 .site-footer {
     padding: 28px 5%;
     background-color: #111111;
@@ -275,8 +252,7 @@ body {
     text-align: center;
 }
 
-
-/* Arranges the footer links in the center. */
+/* Centers the footer links and adds space between them. */
 .footer-links {
     display: flex;
     flex-wrap: wrap;
@@ -285,19 +261,18 @@ body {
     margin-bottom: 18px;
 }
 
-/* Makes footer links white. */
+/* Makes the footer links white. */
 .footer-links a {
     color: #ffffff;
 }
 
-/* Makes footer links yellow when hovered over. */
+/* Changes the footer and research links to yellow on hover. */
 .footer-links a:hover,
 .research-links a:hover {
     color: #ffcc00;
 }
 
-
-/* Styles the research sources and student-project disclaimer. */
+/* Keeps the research links and disclaimer small and easy to read. */
 .research-links,
 .disclaimer {
     margin: 10px 0;
@@ -305,21 +280,17 @@ body {
     color: #d0d0d0;
 }
 
-/* Makes the research links white. */
+/* Keeps the research links white. */
 .research-links a {
     color: #ffffff;
 }
 
-
-/* TABLET: Uses two cards per row on medium-sized screens. */
+/* Shared header and homepage cards: adjusts the layout for screens 900px wide or smaller. */
 @media (max-width: 900px) {
-
-    /* Allows the header items to move onto another line. */
     .site-header {
         flex-wrap: wrap;
     }
 
-    /* Gives the navigation its own row. */
     .navigation {
         order: 3;
         width: 100%;
@@ -327,91 +298,76 @@ body {
         gap: 16px;
     }
 
-    /* Changes the cards from four columns to two. */
+    /* Shows two tool cards per row on smaller screens. */
     .tool-grid {
         grid-template-columns: repeat(2, minmax(0, 1fr));
     }
 }
 
-
-/* PHONE: Makes the page easier to read on small screens. */
+/* Homepage and shared header: adjusts spacing and layout for phones. */
 @media (max-width: 560px) {
-
-    /* Reduces the header spacing. */
     .site-header {
         gap: 16px;
         padding: 16px 5%;
     }
 
-    /* Makes the K symbol smaller. */
     .brand-mark {
         width: 36px;
         height: 36px;
         font-size: 21px;
     }
 
-    /* Makes the brand name smaller. */
     .brand-name {
         font-size: 15px;
     }
 
-    /* Reduces the account button size. */
     .account-button {
         margin-left: auto;
         padding: 9px 10px;
         font-size: 12px;
     }
 
-    /* Aligns navigation links to the left. */
     .navigation {
         justify-content: flex-start;
         gap: 14px;
     }
 
-    /* Reduces navigation text size. */
     .navigation a {
         font-size: 13px;
     }
 
-    /* Reduces the space around the introduction. */
     .intro {
         padding-top: 55px;
         padding-bottom: 45px;
     }
 
-    /* Makes the introduction text slightly smaller. */
     .intro-text {
         font-size: 15px;
     }
 
-    /* Reduces the space around the business tools section. */
     .business-tools {
         padding: 45px 5%;
     }
 
-    /* Displays one card per row on phones. */
+    /* Stacks the tool cards in one column on phones. */
     .tool-grid {
         grid-template-columns: 1fr;
     }
 
-    /* Reduces the height of each card. */
     .tool-card {
         min-height: 190px;
     }
 }
 
-/* ==========================================================
-   ADDITIONAL STYLES FOR ORDERS AND LOGIN PAGES
-   These rules are added after the original styles so the
-   existing homepage and product styling remains unchanged.
-   ========================================================== */
-/* Orders page: spacing and layout for the Current Orders and Past Orders panels. */
-.orders-content, /* Login page: keeps the sign-in and sign-up forms aligned and readable. */
+/* Orders page (orders.html) and login page (login.html): sets the main content width. */
+.orders-content,
 .login-content {
     width: min(1100px, 90%);
     margin: 0 auto;
     padding: 35px 0 65px;
 }
+
+/* Orders page (orders.html): arranges the Current Orders and Past Orders buttons. */
 .order-buttons {
     display: flex;
     flex-wrap: wrap;
@@ -419,7 +375,12 @@ body {
     gap: 14px;
     margin: 25px 0 35px;
 }
-.order-buttons button, .login-button, .login-form button, .signup-form button {
+
+/* Orders page (orders.html) and login page (login.html): gives the buttons the same style. */
+.order-buttons button,
+.login-button,
+.login-form button,
+.signup-form button {
     padding: 12px 20px;
     border: 2px solid #111111;
     border-radius: 3px;
@@ -430,20 +391,33 @@ body {
     cursor: pointer;
     transition: background-color 0.2s ease, transform 0.2s ease;
 }
-.order-buttons button:hover, .login-button:hover, .login-form button:hover, .signup-form button:hover {
+
+/* Darkens the buttons slightly when the user hovers over them. */
+.order-buttons button:hover,
+.login-button:hover,
+.login-form button:hover,
+.signup-form button:hover {
     background-color: #e6b800;
     transform: translateY(-1px);
 }
-.order-buttons button:focus-visible, .login-button:focus-visible,
-.login-form button:focus-visible, .signup-form button:focus-visible,
+
+/* Adds an outline so keyboard users can see which control is selected. */
+.order-buttons button:focus-visible,
+.login-button:focus-visible,
+.login-form button:focus-visible,
+.signup-form button:focus-visible,
 .login-content input:focus-visible {
     outline: 3px solid #c82026;
     outline-offset: 3px;
 }
+
+/* Orders page (orders.html): shows which order tab is selected. */
 .order-buttons button.selected {
     background-color: #111111;
     color: #ffffff;
 }
+
+/* Orders page (orders.html): styles the area where order details appear. */
 .order-panel {
     margin: 20px 0;
     padding: 25px;
@@ -451,33 +425,45 @@ body {
     border: 1px solid #dddddd;
     border-top: 5px solid #ffcc00;
 }
+
+/* Orders page (orders.html): styles the message shown when there are no orders. */
 .no-orders-message {
     margin: 18px 0 0;
     padding: 18px;
     background-color: #f5f5f5;
     border-left: 4px solid #c82026;
 }
-/* Table styles make order details easier to scan across each row. */
+
+/* Orders page (orders.html): keeps the order table usable on narrow screens. */
 .order-table-wrapper {
     width: 100%;
     overflow-x: auto;
     margin-top: 18px;
 }
+
+/* Sets the order table to fill the available space. */
 .order-table {
     width: 100%;
     border-collapse: collapse;
     background-color: #ffffff;
 }
-.order-table th, .order-table td {
+
+/* Adds space around the information in each table cell. */
+.order-table th,
+.order-table td {
     padding: 13px 15px;
     border: 1px solid #dddddd;
     text-align: left;
     vertical-align: top;
 }
+
+/* Makes the table headings stand out with a black background. */
 .order-table th {
     background-color: #111111;
     color: #ffffff;
 }
+
+/* Login page (login.html): styles the box containing the login and sign-up forms. */
 .login-card {
     max-width: 560px;
     margin: 30px auto;
@@ -487,25 +473,49 @@ body {
     border-top: 5px solid #ffcc00;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
 }
-.login-card h2 { margin-top: 0; }
-.login-form, .signup-form {
+
+/* Removes the extra space above the login heading. */
+.login-card h2 {
+    margin-top: 0;
+}
+
+/* Stacks the login and sign-up fields vertically. */
+.login-form,
+.signup-form {
     display: flex;
     flex-direction: column;
     gap: 10px;
 }
-.login-form label, .signup-form label {
+
+/* Makes the form labels bold and separates them from other fields. */
+.login-form label,
+.signup-form label {
     margin-top: 8px;
     font-weight: bold;
 }
-.login-form input, .signup-form input {
+
+/* Makes the input fields fill the width of the form. */
+.login-form input,
+.signup-form input {
     width: 100%;
     padding: 12px;
     border: 1px solid #bbbbbb;
     border-radius: 3px;
     font: inherit;
 }
-.login-form button, .signup-form button { margin-top: 16px; }
-.login-switch { margin-top: 20px; }
+
+/* Adds space above the login and sign-up buttons. */
+.login-form button,
+.signup-form button {
+    margin-top: 16px;
+}
+
+/* Adds space above the link for switching between forms. */
+.login-switch {
+    margin-top: 20px;
+}
+
+/* Styles the button used to switch between login and sign-up. */
 .text-button {
     padding: 0;
     border: 0;
@@ -516,13 +526,20 @@ body {
     text-decoration: underline;
     cursor: pointer;
 }
-.text-button:hover { color: #8f151a; }
+
+/* Makes the text button darker red on hover. */
+.text-button:hover {
+    color: #8f151a;
+}
+
+/* Login page (login.html): styles messages shown below the form. */
 .form-message {
     min-height: 1.5em;
     margin-top: 15px;
     font-weight: bold;
 }
-/* This notice explains that the site is a student prototype, not a live service. */
+
+/* Login page (login.html): styles the note explaining that this is a student prototype. */
 .prototype-notice {
     max-width: 760px;
     margin: 25px auto 0;
@@ -531,395 +548,414 @@ body {
     border-left: 4px solid #ffcc00;
     font-size: 14px;
 }
+
+/* Orders page (orders.html) and login page (login.html): adjusts both pages for phones. */
 @media (max-width: 560px) {
-    .orders-content, .login-content {
+    .orders-content,
+    .login-content {
         width: 92%;
         padding-top: 20px;
     }
-    .order-panel, .login-card { padding: 18px; }
-    .order-buttons { flex-direction: column; }
-    .order-buttons button { width: 100%; }
-    .order-table th, .order-table td { padding: 10px; }
+
+    .order-panel,
+    .login-card {
+        padding: 18px;
+    }
+
+    /* Stacks the order buttons instead of placing them in a row. */
+    .order-buttons {
+        flex-direction: column;
+    }
+
+    .order-buttons button {
+        width: 100%;
+    }
+
+    .order-table th,
+    .order-table td {
+        padding: 10px;
+    }
 }
 
+/* Products page (products.html): sets the width and spacing of the page. */
+.products-page {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 25px;
+}
 
-/* ============================================================
-   PAGE-SPECIFIC STYLES MOVED OUT OF PRODUCTS.HTML
-   These rules belong here so HTML files contain structure only.
-   ============================================================ */
-/* Styles the main products page */
-        .products-page {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 40px 25px;
-        }
+/* Centers the introduction at the top of the products page. */
+.products-intro {
+    text-align: center;
+    padding: 35px 15px;
+}
 
-        /* Styles the introduction at the top */
-        .products-intro {
-            text-align: center;
-            padding: 35px 15px;
-        }
+.products-intro h1 {
+    font-size: 38px;
+    margin-bottom: 15px;
+}
 
-        .products-intro h1 {
-            font-size: 38px;
-            margin-bottom: 15px;
-        }
+/* Keeps the introduction paragraph from getting too wide. */
+.products-intro p {
+    max-width: 750px;
+    margin: 0 auto;
+    line-height: 1.7;
+}
 
-        .products-intro p {
-            max-width: 750px;
-            margin: 0 auto;
-            line-height: 1.7;
-        }
+/* Adds space between the machine and ink sections. */
+.product-section {
+    margin-top: 45px;
+    margin-bottom: 55px;
+    scroll-margin-top: 30px;
+}
 
-        /* Creates space between the machine and ink sections */
-        .product-section {
-            margin-top: 45px;
-            margin-bottom: 55px;
-            scroll-margin-top: 30px;
-        }
+.product-section h2 {
+    font-size: 29px;
+    margin-bottom: 10px;
+}
 
-        .product-section h2 {
-            font-size: 29px;
-            margin-bottom: 10px;
-        }
+/* Adds space below the description for each product section. */
+.section-description {
+    line-height: 1.6;
+    margin-bottom: 25px;
+}
 
-        .section-description {
-            line-height: 1.6;
-            margin-bottom: 25px;
-        }
+/* Arranges the products into three columns. */
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
 
-        /* Displays the product cards in a grid */
-        .product-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 25px;
-        }
+/* Sets the background, spacing, and border of each product card. */
+.product-card {
+    background-color: #ffffff;
+    border: 1px solid #dddddd;
+    border-radius: 8px;
+    padding: 25px;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.08);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
 
-        /* Styles each individual product card */
-        .product-card {
-            background-color: #ffffff;
-            border: 1px solid #dddddd;
-            border-radius: 8px;
-            padding: 25px;
-            box-shadow: 0 3px 8px rgba(0, 0, 0, 0.08);
+/* Lifts the card and makes its shadow more noticeable on hover. */
+.product-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.15);
+}
 
-            /* Makes the hover effect smooth */
-            transition: transform 0.25s ease, box-shadow 0.25s ease;
-        }
+/* Styles the small label that shows the product category. */
+.product-type {
+    display: inline-block;
+    background-color: #fff1b8;
+    color: #333333;
+    padding: 6px 10px;
+    border-radius: 4px;
+    font-size: 12px;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
 
-        /* Adds a hover effect when the mouse moves over a card */
-        .product-card:hover {
-            transform: translateY(-6px);
-            box-shadow: 0 8px 18px rgba(0, 0, 0, 0.15);
-        }
+.product-card h3 {
+    font-size: 21px;
+    margin-bottom: 12px;
+}
 
-        /* Styles the small product category label */
-        .product-type {
-            display: inline-block;
-            background-color: #fff1b8;
-            color: #333333;
-            padding: 6px 10px;
-            border-radius: 4px;
-            font-size: 12px;
-            font-weight: bold;
-            margin-bottom: 15px;
-        }
+/* Adds space below the product descriptions. */
+.product-card p {
+    line-height: 1.6;
+    margin-bottom: 18px;
+}
 
-        /* Styles the product name */
-        .product-card h3 {
-            font-size: 21px;
-            margin-bottom: 12px;
-        }
+/* Styles the View Details button. */
+.details-button {
+    display: inline-block;
+    background-color: #f5c400;
+    color: #111111;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 11px 18px;
+    border-radius: 4px;
+    transition: background-color 0.2s ease;
+}
 
-        /* Styles the product description */
-        .product-card p {
-            line-height: 1.6;
-            margin-bottom: 18px;
-        }
+/* Changes the button to a darker yellow when hovered over. */
+.details-button:hover {
+    background-color: #e0b200;
+}
 
-        /* Styles the View Details buttons */
-        .details-button {
-            display: inline-block;
-            background-color: #f5c400;
-            color: #111111;
-            text-decoration: none;
-            font-weight: bold;
-            padding: 11px 18px;
-            border-radius: 4px;
-            transition: background-color 0.2s ease;
-        }
+/* Adds an outline when someone selects the button using a keyboard. */
+.details-button:focus-visible {
+    outline: 3px solid #222222;
+    outline-offset: 3px;
+}
 
-        /* Changes the button color when hovered over */
-        .details-button:hover {
-            background-color: #e0b200;
-        }
+/* Keeps the Request Quote button hidden until the product card is hovered over or selected. */
+.quote-button {
+    display: inline-block;
+    margin-left: 8px;
+    background-color: #222222;
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 11px 18px;
+    border-radius: 4px;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(5px);
+    transition: opacity 0.2s ease, transform 0.2s ease, visibility 0.2s ease;
+}
 
-        /* Makes keyboard navigation easier to see */
-        .details-button:focus-visible {
-            outline: 3px solid #222222;
-            outline-offset: 3px;
-        }
+/* Shows the Request Quote button when the user hovers over or focuses inside a product card. */
+.product-card:hover .quote-button,
+.product-card:focus-within .quote-button {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
 
-        /*
-         * The Request Quote button starts hidden so each product card stays neat.
-         * When a visitor moves the mouse over a product card, the button appears.
-         * The focus rule does the same thing for someone using a keyboard.
-         */
-        .quote-button {
-            display: inline-block;
-            margin-left: 8px;
-            background-color: #222222;
-            color: #ffffff;
-            text-decoration: none;
-            font-weight: bold;
-            padding: 11px 18px;
-            border-radius: 4px;
-            opacity: 0;
-            visibility: hidden;
-            transform: translateY(5px);
-            transition: opacity 0.2s ease, transform 0.2s ease, visibility 0.2s ease;
-        }
+/* Changes the quote button background when the user hovers over it. */
+.quote-button:hover {
+    background-color: #444444;
+}
 
-        /* Reveal the quote button only when the product card is hovered or focused. */
-        .product-card:hover .quote-button,
-        .product-card:focus-within .quote-button {
-            opacity: 1;
-            visibility: visible;
-            transform: translateY(0);
-        }
+/* Makes the quote button easier to see when selected using a keyboard. */
+.quote-button:focus-visible {
+    outline: 3px solid #f5c400;
+    outline-offset: 3px;
+}
 
-        /* Give the quote button a clear hover and keyboard-focus state. */
-        .quote-button:hover {
-            background-color: #444444;
-        }
+/* Keeps the quote button visible on touchscreens where hovering is not available. */
+@media (hover: none) {
+    .quote-button {
+        opacity: 1;
+        visibility: visible;
+        transform: none;
+        margin-top: 10px;
+        margin-left: 0;
+    }
+}
 
-        .quote-button:focus-visible {
-            outline: 3px solid #f5c400;
-            outline-offset: 3px;
-        }
+/* Highlights the note about product availability. */
+.inventory-notice {
+    background-color: #f5f5f5;
+    border-left: 5px solid #f5c400;
+    padding: 20px;
+    margin-top: 25px;
+    line-height: 1.6;
+}
 
-        /* On touch screens there is no mouse hover, so keep the button visible. */
-        @media (hover: none) {
-            .quote-button {
-                opacity: 1;
-                visibility: visible;
-                transform: none;
-                margin-top: 10px;
-                margin-left: 0;
-            }
-        }
+/* Changes the product layout to two columns on tablets. */
+@media (max-width: 850px) {
+    .product-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
 
-        /* Styles the inventory notice */
-        .inventory-notice {
-            background-color: #f5f5f5;
-            border-left: 5px solid #f5c400;
-            padding: 20px;
-            margin-top: 25px;
-            line-height: 1.6;
-        }
+/* Changes the product layout to one column on phones. */
+@media (max-width: 550px) {
+    .product-grid {
+        grid-template-columns: 1fr;
+    }
 
-        /* Adjusts the product grid for tablets */
-        @media (max-width: 850px) {
-            .product-grid {
-                grid-template-columns: repeat(2, 1fr);
-            }
-        }
+    .products-intro h1 {
+        font-size: 30px;
+    }
 
-        /* Adjusts the product grid for mobile phones */
-        @media (max-width: 550px) {
-            .product-grid {
-                grid-template-columns: 1fr;
-            }
+    .product-section h2 {
+        font-size: 25px;
+    }
+}
 
-            .products-intro h1 {
-                font-size: 30px;
-            }
+/* Support page (support.html): styles the main support form. */
+#support-form {
+    max-width: 750px;
+    margin: 30px auto;
+    padding: 30px;
+    background-color: #ffffff;
+    border: 1px solid #dddddd;
+    border-top: 5px solid #ffcc00;
+}
 
-            .product-section h2 {
-                font-size: 25px;
-            }
-        }
+/* Places each support form field on its own line. */
+.support-form-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 22px;
+}
 
+/* Makes the form labels and field headings bold. */
+.support-form-group > label,
+.support-form-group legend {
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: #222222;
+}
 
-/* ============================================================
-   PAGE-SPECIFIC STYLES MOVED OUT OF SUPPORT.HTML
-   These rules belong here so HTML files contain structure only.
-   ============================================================ */
-/* Main support form */
-        #support-form {
-            max-width: 750px;
-            margin: 30px auto;
-            padding: 30px;
-            background-color: #ffffff;
-            border: 1px solid #dddddd;
-            border-top: 5px solid #ffcc00;
-        }
+/* Gives the text fields, dropdown, and message box a consistent style. */
+.support-form-group input[type="text"],
+.support-form-group input[type="email"],
+.support-form-group select,
+.support-form-group textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #cccccc;
+    border-radius: 3px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
+    background-color: #ffffff;
+}
 
-        /* Form fields */
-        .support-form-group {
-            display: flex;
-            flex-direction: column;
-            margin-bottom: 22px;
-        }
+/* Makes the issue description box larger and lets the user resize it vertically. */
+#issue-description {
+    min-height: 280px;
+    width: 100%;
+    resize: vertical;
+    line-height: 1.6;
+}
 
-        .support-form-group > label,
-        .support-form-group legend {
-            margin-bottom: 8px;
-            font-weight: bold;
-            color: #222222;
-        }
+/* Places the character count below the issue description. */
+#character-count {
+    display: block;
+    margin-top: 6px;
+    color: #666666;
+    text-align: right;
+    font-size: 12px;
+}
 
-        .support-form-group input[type="text"],
-        .support-form-group input[type="email"],
-        .support-form-group select,
-        .support-form-group textarea {
-            width: 100%;
-            padding: 12px;
-            border: 1px solid #cccccc;
-            border-radius: 3px;
-            font-family: Arial, Helvetica, sans-serif;
-            font-size: 15px;
-            background-color: #ffffff;
-        }
+/* Highlights a form field when the user clicks into it. */
+.support-form-group input:focus,
+.support-form-group select:focus,
+.support-form-group textarea:focus {
+    outline: 2px solid #ffcc00;
+    border-color: #111111;
+}
 
-        /* Larger issue description box */
-        #issue-description {
-            min-height: 280px;
-            width: 100%;
-            resize: vertical;
-            line-height: 1.6;
-        }
+/* Adds a border around the options for an on-site visit. */
+fieldset.support-form-group {
+    border: 1px solid #dddddd;
+    padding: 18px;
+}
 
-        /* Character counter */
-        #character-count {
-            display: block;
-            margin-top: 6px;
-            color: #666666;
-            text-align: right;
-            font-size: 12px;
-        }
+/* Gives the on-site visit heading some space. */
+.support-form-group legend {
+    padding: 0 8px;
+}
 
-        /* Highlight fields when selected */
-        .support-form-group input:focus,
-        .support-form-group select:focus,
-        .support-form-group textarea:focus {
-            outline: 2px solid #ffcc00;
-            border-color: #111111;
-        }
+/* Keeps each radio button next to its label. */
+.support-radio-option {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    margin: 10px 0;
+}
 
-        /* On-site visit options */
-        fieldset.support-form-group {
-            border: 1px solid #dddddd;
-            padding: 18px;
-        }
+/* Moves the radio button down slightly to line it up with the text. */
+.support-radio-option input {
+    margin-top: 5px;
+    accent-color: #c82026;
+}
 
-        .support-form-group legend {
-            padding: 0 8px;
-        }
+/* Shows the user that the radio option label can be clicked. */
+.support-radio-option label {
+    cursor: pointer;
+    color: #333333;
+}
 
-        .support-radio-option {
-            display: flex;
-            align-items: flex-start;
-            gap: 10px;
-            margin: 10px 0;
-        }
+/* Keeps the submit and clear buttons together. */
+.support-form-buttons {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+    margin-top: 25px;
+}
 
-        .support-radio-option input {
-            margin-top: 5px;
-            accent-color: #c82026;
-        }
+/* Styles the buttons at the bottom of the support form. */
+.support-form-buttons button {
+    padding: 13px 20px;
+    background-color: #ffcc00;
+    color: #111111;
+    border: 2px solid #111111;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+}
 
-        .support-radio-option label {
-            cursor: pointer;
-            color: #333333;
-        }
+/* Darkens the buttons when the user hovers over them. */
+.support-form-buttons button:hover {
+    background-color: #e6b800;
+}
 
-        /* Submit and clear buttons */
-        .support-form-buttons {
-            display: flex;
-            gap: 12px;
-            flex-wrap: wrap;
-            margin-top: 25px;
-        }
+/* Keeps the clear button white so it looks different from Submit. */
+.support-form-buttons .reset-button {
+    background-color: #ffffff;
+    color: #111111;
+}
 
-        .support-form-buttons button {
-            padding: 13px 20px;
-            background-color: #ffcc00;
-            color: #111111;
-            border: 2px solid #111111;
-            font-size: 14px;
-            font-weight: bold;
-            cursor: pointer;
-        }
+/* Gives the clear button a light gray background on hover. */
+.support-form-buttons .reset-button:hover {
+    background-color: #eeeeee;
+}
 
-        .support-form-buttons button:hover {
-            background-color: #e6b800;
-        }
+/* Styles the message that appears after the form is submitted. */
+#support-message {
+    margin-top: 20px;
+    font-weight: bold;
+    line-height: 1.6;
+}
 
-        .support-form-buttons .reset-button {
-            background-color: #ffffff;
-            color: #111111;
-        }
+/* Styles the section at the bottom that shows the support reference number. */
+.support-reference {
+    max-width: 750px;
+    margin: 35px auto 0;
+    padding: 25px;
+    text-align: center;
+    background-color: #111111;
+    color: #ffffff;
+    border-bottom: 5px solid #ffcc00;
+}
 
-        .support-form-buttons .reset-button:hover {
-            background-color: #eeeeee;
-        }
+.support-reference p {
+    margin: 5px 0;
+}
 
-        /* Form submission message */
-        #support-message {
-            margin-top: 20px;
-            font-weight: bold;
-            line-height: 1.6;
-        }
+/* Makes the reference number stand out in yellow. */
+.support-reference h3 {
+    margin: 10px 0;
+    color: #ffcc00;
+    font-size: 30px;
+    letter-spacing: 3px;
+}
 
-        /* Reference number at the bottom */
-        .support-reference {
-            max-width: 750px;
-            margin: 35px auto 0;
-            padding: 25px;
-            text-align: center;
-            background-color: #111111;
-            color: #ffffff;
-            border-bottom: 5px solid #ffcc00;
-        }
+/* Support page (support.html): adjusts the form for phones. */
+@media (max-width: 560px) {
+    #support-form {
+        padding: 20px;
+    }
 
-        .support-reference p {
-            margin: 5px 0;
-        }
+    /* Stacks the buttons vertically on phones. */
+    .support-form-buttons {
+        flex-direction: column;
+    }
 
-        .support-reference h3 {
-            margin: 10px 0;
-            color: #ffcc00;
-            font-size: 30px;
-            letter-spacing: 3px;
-        }
+    .support-form-buttons button {
+        width: 100%;
+    }
 
-        /* Responsive design for smaller screens */
-        @media (max-width: 560px) {
-            #support-form {
-                padding: 20px;
-            }
+    .support-reference {
+        padding: 20px 12px;
+    }
+}
 
-            .support-form-buttons {
-                flex-direction: column;
-            }
+/* Shared styles: hides elements on any page when the HTML uses the hidden attribute. */
 
-            .support-form-buttons button {
-                width: 100%;
-            }
-
-            .support-reference {
-                padding: 20px 12px;
-            }
-        }
-
-
-/* ACCESSIBILITY: Keep elements marked hidden out of the layout. */
+/* !important makes this rule take priority over conflicting display rules. */
 [hidden] {
     display: none !important;
 }
 
-/* SHARED FORM IMPROVEMENTS: Make keyboard focus visible on interactive controls. */
+/* Shared styles: helps keyboard users see links, buttons, and form fields on all pages. */
+
+/* :focus-visible adds an outline when someone uses the keyboard to select an element. */
 button:focus-visible,
 input:focus-visible,
 select:focus-visible,

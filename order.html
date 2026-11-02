@@ -1,74 +1,130 @@
 <!DOCTYPE html>
+
 <html lang="en">
+
 <head>
+
     <meta charset="UTF-8">
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>My Orders | Kodak Business Hub</title>
-    <!--links the css file here -->
+
+    <!-- Connects this page to the CSS file that controls its appearance. -->
     <link rel="stylesheet" href="style.css">
 
-    <!-- LOGIN CHECK: Visitors must sign in before viewing this page. -->
-    <!-- linking the js file here-->
+    <!-- Checks whether the user has signed in before viewing this page. -->
+    <!-- The defer attribute allows the browser to finish reading the HTML before running the JavaScript. -->
     <script src="script.js" defer></script>
-</head>
-<body>
-    <!-- Yellow strip bar at the top matching the rest of the website. -->
-    <div class="top-bar"><p>COMMERCIAL PRINT / TEXTILE</p></div>
 
-    <!-- website header and navigation. -->
+</head>
+
+<body>
+
+    <!-- Displays the yellow category bar at the top of the website. -->
+    <div class="top-bar">
+        <p>COMMERCIAL PRINT / TEXTILE</p>
+    </div>
+
+    <!-- Contains the Kodak logo, navigation links, and business account button. -->
     <header class="site-header">
+
+        <!-- Clicking the logo takes the user back to the homepage. -->
         <a class="brand" href="index.html" aria-label="Kodak Business Hub home">
+
             <span class="brand-mark">K</span>
+
             <span class="brand-name">KODAK<small>BUSINESS HUB</small></span>
+
         </a>
+
+        <!-- Allows the user to navigate between the main pages of the website. -->
         <nav class="navigation" aria-label="Main navigation">
+
             <a href="index.html">Home</a>
+
             <a href="products.html">Products</a>
+
+            <!-- Marks Orders as the page currently being viewed. -->
             <a class="active" href="order.html" aria-current="page">Orders</a>
+
             <a href="support.html">Support</a>
+
         </nav>
+
+        <!-- Takes the user to the business account login page. -->
         <a class="account-button" href="login.html">Business Account</a>
+
     </header>
 
-
     <main>
+
+        <!-- Introduces the order management page and explains what the user can do. -->
         <section class="intro">
+
             <p class="small-heading">ORDER MANAGEMENT</p>
+
             <h1>My <span>Orders.</span></h1>
+
             <p class="intro-text">
                 Here you can choose Current Orders to view tracking information and order details, or Past Orders
                 to see when an order was placed and where it was delivered with the order information.
             </p>
+
         </section>
 
+        <!-- Contains the buttons and tables used to display order information. -->
         <section class="business-tools" id="orders-page">
+
             <div class="section-title">
+
                 <p class="small-heading">YOUR ORDER HISTORY</p>
+
                 <h2>Businesses Orders</h2>
+
                 <p>Select one of the buttons to view that type of order and their details.</p>
+
             </div>
 
-            <!-- here JavaScript is used to display order category the user chooses -->
+            <!-- JavaScript uses these buttons to switch between current and past orders. -->
             <div class="order-buttons" aria-label="Choose which orders to view">
+
+                <!-- Opens the current orders panel when the user clicks this button. -->
                 <button type="button" id="current-orders-button" class="selected"
                     aria-controls="current-orders-panel" aria-pressed="true">
+
                     Current Orders
+
                 </button>
+
+                <!-- Opens the past orders panel when the user clicks this button. -->
                 <button type="button" id="past-orders-button"
                     aria-controls="past-orders-panel" aria-pressed="false">
+
                     Past Orders
+
                 </button>
+
             </div>
 
-            <!-- Current orders show the order date and tracking number. -->
+            <!-- Displays current orders, including their dates and tracking numbers. -->
             <section class="order-panel" id="current-orders-panel">
+
                 <h2>Current Orders</h2>
+
+                <!-- Displays this message when there are no current orders to show. -->
                 <p class="no-orders-message" id="no-current-orders" role="status">
+
                     No orders found.
+
                 </p>
-                 <!-- this section is hidden until user had a order-->
+
+                <!-- Keeps the current orders table hidden until order information is available. -->
                 <div class="order-table-wrapper" id="current-orders-container" hidden>
+
                     <table class="order-table">
+
+                        <!-- Defines the column headings for current orders. -->
                         <thead>
                             <tr>
                                 <th scope="col">Order ID</th>
@@ -77,20 +133,34 @@
                                 <th scope="col">Tracking Number</th>
                             </tr>
                         </thead>
+
+                        <!-- JavaScript adds current order information to this table. -->
                         <tbody id="current-orders-table"></tbody>
+
                     </table>
+
                 </div>
+
             </section>
 
-            <!-- Past orders show the order date and delivery address. -->
+            <!-- Displays completed orders and their delivery information. -->
             <section class="order-panel" id="past-orders-panel" hidden>
+
                 <h2>Past Orders</h2>
+
+                <!-- Displays this message when there are no past orders to show. -->
                 <p class="no-orders-message" id="no-past-orders" role="status">
+
                     No orders found.
+
                 </p>
-                <!-- hidden until the user had order details-->
+
+                <!-- Keeps the past orders table hidden until order information is available. -->
                 <div class="order-table-wrapper" id="past-orders-container" hidden>
+
                     <table class="order-table">
+
+                        <!-- Defines the column headings for past orders. -->
                         <thead>
                             <tr>
                                 <th scope="col">Order ID</th>
@@ -99,30 +169,56 @@
                                 <th scope="col">Delivered To</th>
                             </tr>
                         </thead>
+
+                        <!-- JavaScript adds past order information to this table. -->
                         <tbody id="past-orders-table"></tbody>
+
                     </table>
+
                 </div>
+
             </section>
 
+            <!-- Informs the user that this is a student website concept. -->
             <div class="prototype-notice">
+
                 <strong>Order information:</strong>
+
                 This is a student website concept.
+
             </div>
+
         </section>
+
     </main>
 
+    <!-- Provides links to the main website pages at the bottom of the page. -->
     <footer class="site-footer">
+
         <div class="footer-links">
+
             <a href="index.html">Home</a>
+
             <a href="products.html">Products</a>
+
             <a href="order.html">Orders</a>
+
             <a href="support.html">Support</a>
+
             <a href="login.html">Business Account</a>
+
         </div>
+
+        <!-- Explains that this is not an official Kodak ordering platform. -->
         <p class="disclaimer">
+
             Kodak Business Hub is a student website concept and is not an official
             Kodak ordering platform.
+
         </p>
+
     </footer>
+
 </body>
+
 </html>
