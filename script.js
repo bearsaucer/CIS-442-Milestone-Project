@@ -1,25 +1,31 @@
 // This JavaScript file is shared by all the pages in Kodak Business Hub.
 
-// Checks whether the visitor is currently on the login page.
-const isLoginPage = Boolean(document.getElementById("login-form"));
-
-// All pages except login.html require the visitor to sign in first.
-if (!isLoginPage) {
-    // Gets the email address saved when the visitor signed in.
-    const signedInEmail = sessionStorage.getItem("kodakBusinessSignedInEmail");
-
-    // If no email is saved, send the visitor to the login page.
-    if (!signedInEmail) {
-        // replace() sends the visitor to login.html.
-        window.location.replace("login.html");
-    }
+const currentParams = new URLSearchParams(window.location.search);
+const redirectedEmail = currentParams.get("signedInEmail");
+if (redirectedEmail) {
+    sessionStorage.setItem("kodakBusinessSignedInEmail", redirectedEmail);
 }
 
-/* Login page (login.html): handles signing in and creating an account. */
+// Checks whether the visitor is currently on the login page.
+const isLoginPage = Boolean(
+    document.getElementById("login-form") && document.getElementById("signup-form")
+);
 
-// Checks whether the login and sign-up forms exist on this page.
-if (document.getElementById("login-form") && document.getElementById("signup-form")) {
+// All pages except login.html require the visitor to sign in first.
+//if (!isLoginPage) {
+    // Gets the email address saved when the visitor signed in.
+   // const signedInEmail = sessionStorage.getItem("kodakBusinessSignedInEmail");
 
+    // If no email is saved, send the visitor to the login page.
+    //if (!signedInEmail) {
+        // replace() sends the visitor to login.html.
+        //window.location.replace("login.html");
+   // }
+//}
+
+/* Login page (login.html): toggles login/sign-up sections and displays server auth messages. */
+
+if (isLoginPage) {
     // Finds the screen where the visitor chooses Log In or Sign Up.
     const accountOptions = document.getElementById("account-options");
 
@@ -28,12 +34,6 @@ if (document.getElementById("login-form") && document.getElementById("signup-for
 
     // Finds the section that contains the sign-up form.
     const signupSection = document.getElementById("signup-section");
-
-    // Finds the login form so JavaScript can handle its submission.
-    const loginForm = document.getElementById("login-form");
-
-    // Finds the sign-up form so JavaScript can handle its submission.
-    const signupForm = document.getElementById("signup-form");
 
     // Finds the area where login messages will appear.
     const loginMessage = document.getElementById("login-message");
@@ -72,109 +72,6 @@ if (document.getElementById("login-form") && document.getElementById("signup-for
         signupMessage.textContent = "";
     }
 
-    // Checks the sign-up information and creates a demo account.
-    function handleSignupSubmit(event) {
-        // Stops the form from refreshing the page when submitted.
-        event.preventDefault();
-
-        // Gets the company name and removes extra spaces at the beginning and end.
-        const companyName = document.getElementById("company-name").value.trim();
-
-        // Gets the email, removes extra spaces, and changes it to lowercase.
-        const email = document.getElementById("signup-email").value.trim().toLowerCase();
-
-        // Gets the password entered by the visitor.
-        const password = document.getElementById("signup-password").value;
-
-        // Gets the password entered in the confirmation field.
-        const confirmPassword = document.getElementById("confirm-password").value;
-
-        // Checks whether both password fields contain the same password.
-        if (password !== confirmPassword) {
-            signupMessage.textContent = "The passwords do not match. Please try again.";
-            return;
-        }
-
-        // Creates a unique storage key using the visitor's email address.
-        const storageKey = "kodakBusinessAccount-" + email;
-
-        // Checks whether an account already exists for this email.
-        const existingAccount = localStorage.getItem(storageKey);
-
-        // Prevents another account from being created with the same email.
-        if (existingAccount !== null) {
-            signupMessage.textContent =
-                "An account already exists for this email. Please log in instead.";
-            return;
-        }
-
-        // Collects the new account information into one object.
-        const account = {
-            companyName: companyName,
-            email: email,
-            password: password
-        };
-
-        // Saves the account information in the browser for this demonstration.
-        localStorage.setItem(storageKey, JSON.stringify(account));
-
-        // Saves the signed-in email for the current browser session.
-        sessionStorage.setItem("kodakBusinessSignedInEmail", email);
-
-        // Opens the homepage after the account is created.
-        window.location.href = "index.html";
-    }
-
-    // Checks the visitor's email and password when they try to log in.
-    function handleLoginSubmit(event) {
-        // Stops the form from refreshing the page when submitted.
-        event.preventDefault();
-
-        // Gets the email, removes extra spaces, and changes it to lowercase.
-        const email = document.getElementById("login-email").value.trim().toLowerCase();
-
-        // Gets the password entered by the visitor.
-        const password = document.getElementById("login-password").value;
-
-        // Uses the email to find the account saved in the browser.
-        const storageKey = "kodakBusinessAccount-" + email;
-
-        // Looks for the saved account information.
-        const savedAccountText = localStorage.getItem(storageKey);
-
-        // Shows a message if no account exists for this email.
-        if (savedAccountText === null) {
-            loginMessage.textContent =
-                "No account was found for that email. Please sign up first.";
-            return;
-        }
-
-        // Creates a variable to hold the account information.
-        let savedAccount;
-
-        try {
-            // Converts the saved account information back into a JavaScript object.
-            savedAccount = JSON.parse(savedAccountText);
-        } catch (error) {
-            // Shows a message if the saved account information cannot be read.
-            loginMessage.textContent =
-                "The saved demo account could not be read. Please sign up again.";
-            return;
-        }
-
-        // Checks whether the entered password matches the saved password.
-        if (savedAccount.password !== password) {
-            loginMessage.textContent = "The password is incorrect. Please try again.";
-            return;
-        }
-
-        // Saves the email to show that the visitor is signed in.
-        sessionStorage.setItem("kodakBusinessSignedInEmail", email);
-
-        // Opens the homepage after a successful login.
-        window.location.href = "index.html";
-    }
-
     // Shows the login form when the visitor clicks the Log In button.
     document.getElementById("show-login").addEventListener("click", showLoginForm);
 
@@ -187,11 +84,18 @@ if (document.getElementById("login-form") && document.getElementById("signup-for
     // Switches from the sign-up form to the login form.
     document.getElementById("signup-to-login").addEventListener("click", showLoginForm);
 
-    // Runs the sign-up function when the sign-up form is submitted.
-    signupForm.addEventListener("submit", handleSignupSubmit);
+    // If redirected back from login.php with an error, open the relevant form and show the message.
+    const authError = currentParams.get("authError");
+    const errorMessage = currentParams.get("message");
+    if (authError === "login" && errorMessage) {
+        showLoginForm();
+        loginMessage.textContent = errorMessage;
+    } else if (authError === "signup" && errorMessage) {
+        showSignupForm();
+        signupMessage.textContent = errorMessage;
+    }
 
-    // Runs the login function when the login form is submitted.
-    loginForm.addEventListener("submit", handleLoginSubmit);
+    window.returnToAccountChoices = returnToAccountChoices;
 }
 
 /* Orders page (orders.html): displays current orders and past orders. */
@@ -202,8 +106,8 @@ if (
     document.getElementById("past-orders-button")
 ) {
     /*
-     * Current orders use id, product, orderDate, and trackingNumber.
-     * Past orders use id, product, orderDate, and deliveryAddress.
+- Current orders use id, product, orderDate, and trackingNumber.
+- Past orders use id, product, orderDate, and deliveryAddress.
      */
 
     // Holds the current orders displayed in the table.
@@ -402,24 +306,9 @@ if (document.getElementById("support-form")) {
             currentLength >= 1800 ? "#c82026" : "#666666";
     }
 
-    // Handles the support form submission for this website demonstration.
-    function handleSupportSubmit(event) {
-        // Stops the form from refreshing the page.
-        event.preventDefault();
-
-        // Clears the form fields after submission.
-        supportForm.reset();
-
-        // Resets the character counter to match the empty description box.
-        updateCharacterCount();
-
-        // Displays a confirmation message with the support reference number.
-        supportMessage.textContent =
-            "Your support request has been completed for this demonstration. " +
-            "Please keep reference number 123456789 for your records.";
-
-        // Makes the confirmation message green.
-        supportMessage.style.color = "#16803c";
+    // Lets the form submit normally to support.php instead of blocking it.
+    function handleSupportSubmit() {
+        // Nothing blocked here; the browser sends the form fields to support.php.
     }
 
     // Clears the confirmation message when the visitor resets the form.
